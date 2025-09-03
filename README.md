@@ -11,6 +11,7 @@ Aprenderás a:
 Desarrollar un plugin sencillo en QGIS con PyQGIS.
 
 Requisitos:
+
 Aprenderás a:
 * Instalar y configurar QGIS y Python.
 * Usar la consola de Python en QGIS.
