@@ -75,3 +75,74 @@ QGIS instalado (Windows con OSGeo4W, macOS o Linux), datos vectoriales/raster (S
 
 # Tutorial para usar QGIS con PYTHON
 
+## 1. Introducción
+
+QGIS es un Sistema de Información Geográfica (SIG) que permite trabajar con mapas, datos espaciales y análisis geográficos.
+Tiene dos formas principales de uso:
+
+* Interfaz gráfica (GUI): todo con menús y botones, sin necesidad de programar.
+
+* PyQGIS (Python): escribir código para automatizar y repetir procesos fácilmente.
+
+En este tutorial haremos lo mismo en ambos métodos:
+
+* Cargar capas.
+* Reproyectar.
+* Crear un buffer.
+* Recortar (clip).
+* Exportar resultados.
+
+## 2. Paso a paso en la GUI (Interfaz Gráfica)
+### 2.1 Cargar capas
+* Menú Capa > Añadir capa > Añadir capa vectorial.
+* Selecciona tu archivo (ejemplo: limite.gpkg).
+* Repite para otra capa (ejemplo: rios.shp).
+
+### 2.2 Reproyectar capas
+
+* Clic derecho sobre la capa > Exportar > Guardar objetos como....
+* Elige un CRS objetivo (ejemplo: EPSG:4326).
+* Guarda con nuevo nombre (ej. rios_4326.gpkg).
+
+### 2.3 Crear un buffer
+
+* Abre la Caja de Herramientas de Procesamiento (Ctrl+Alt+T).
+* Busca "Buffer".
+* Selecciona rios_4326, define una distancia (ej. 500 metros) y ejecuta.
+
+### 2.4 Recortar (Clip)
+
+* Busca "Clip" en la Toolbox.
+* Usa como entrada el buffer y como capa de recorte el limite.gpkg.
+* Guarda salida como rios_buffer_clip.gpkg.
+
+### 2.5 Exportar resultados
+
+* Clic derecho sobre la capa final > Exportar > Guardar objetos como....
+* Elige formato (GeoPackage, Shapefile, GeoJSON).
+  
+## 3. Paso a paso en PyQGIS (Python)
+
+* Abrir la Consola Python (Complementos > Consola Python) y ejecutar los scripts.
+### 3.1 Cargar capas
+### 3.2 Reproyectar
+### 3.3 Crear buffer
+### 3.4 Recortar (Clip)
+### 3.5 Exportar resultados
+
+## 4. Comparación GUI vs PyQGIS
+* GUI: más fácil, intuitivo y visual. Perfecto para empezar.
+* PyQGIS: ideal para automatizar, documentar y repetir procesos.
+ojo (con PyQGIS puedes hacer buffers de 100 capas con un bucle, algo muy lento en la GUI.)
+
+## 5 Buenas prácticas para principiantes
+* Usa GeoPackage en lugar de Shapefile.
+* Mantén siempre el mismo CRS en tu proyecto.
+* Revisa geometrías con Vector > Herramientas de geometría > Verificar validez.
+* Guarda tus scripts y proyectos en carpetas ordenadas.
+
+## 6. Conclusión
+
+* La GUI de QGIS es el primer paso: te permite aprender el flujo básico de análisis.
+* PyQGIS da un segundo nivel: automatización y escalabilidad.
+* Lo mejor es combinar ambos enfoques: probar en GUI y luego convertir en script.
