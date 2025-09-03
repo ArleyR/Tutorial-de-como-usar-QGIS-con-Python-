@@ -10,11 +10,9 @@ Aprenderás a:
 * Crear scripts para tareas repetitivas.
 Desarrollar un plugin sencillo en QGIS con PyQGIS.
 
-Requisitos:
+Requisitos previos
 
 Aprenderás a:
-* Instalar y configurar QGIS y Python.
-* Usar la consola de Python en QGIS.
-* Manipular capas vectoriales y ráster.
-* Crear scripts para tareas repetitivas.
-Desarrollar un plugin sencillo en QGIS con PyQGIS.
+* [QGIS](https://qgis.org/download/) (versión recomendada: 3.x)
+* Python 3.x (viene incluido con QGIS)
+* Librerías adicionales: "pip install geopandas rasterio pyproj"
