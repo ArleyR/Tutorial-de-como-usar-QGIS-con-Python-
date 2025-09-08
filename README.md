@@ -34,65 +34,26 @@ El objetivo es aprender a **abrir un archivo SHP, exportarlo y trabajarlo en Pyt
 
 ---
 
-## Paso 1. Instalar los programas
+## Paso 1. Instalar los programas (Links ya mostrados)
 
 1. **Instalar QGIS**  
-   - Descarga desde: [https://qgis.org/es/site/](https://qgis.org/es/site/)  
-   - Elige la versión **LTS (Long Term Support)**, más estable.  
-   - Instálala como cualquier programa.
+   [https://qgis.org/es/site/](https://qgis.org/es/site/)  
 
-2. **Instalar Python y librerías necesarias**  
-   - Descarga Python desde: [https://www.python.org/downloads/](https://www.python.org/downloads/)  
-   - Una vez instalado, abre la terminal (o símbolo del sistema) y ejecuta:  
+2. **Instalar Python y librerías necesarias**
+   [https://www.python.org/downloads/](https://www.python.org/downloads/)  
 
-   ```bash
-   pip install geopandas pandas matplotlib
+## Paso 2. Utilización de QGIS
 
-## Paso 2. Abrir un SHP en QGIS
+Con los pasos podrás utilizar QGIS con Python
 
-Abre QGIS.
+## Paso 3 Lectura de los datos en Python
 
-Menú superior → Capa → Añadir capa → Añadir capa vectorial.
+Una vez exportados los datos desde QGIS, se pueden cargar en Python.
 
-Selecciona tu archivo nombre.shp.
+## Paso 4 Trabajar con los datos a tu gusto
 
-Haz clic en Añadir.
-
-**El mapa aparecerá en pantalla**
-
-Para ver la tabla de atributos:
-
-Clic derecho sobre la capa (panel izquierdo).
-
-Selecciona Abrir tabla de atributos.
-
-Verás columnas (atributos) y filas (cada elemento del mapa).
-
-## Paso 3: Exportación de datos desde QGIS
-
-Una vez cargada la capa en QGIS, es posible exportar la información en diferentes formatos según los objetivos del análisis. Este procedimiento se realiza desde el panel de capas con un clic derecho sobre la capa deseada y seleccionando la opción *Exportar → Guardar entidades como…*.
-
-### 🔹 Exportar únicamente la tabla de atributos
-1. Seleccionar la capa y hacer clic derecho → *Exportar → Guardar entidades como…*.  
-2. En el campo *Formato, escoger **CSV*.  
-3. Definir la ruta y el nombre del archivo en *Archivo de salida*.  
-4. Confirmar con *Aceptar*.  
-
-De este modo se genera un archivo *.csv, que contiene únicamente la información tabular (sin geometría) y que puede ser abierto en programas como **Excel* o en *Python* mediante la librería *pandas*.
+Con los datos ya en Python puedes utilizarlos para el análisis de tu interés!
 
 ---
 
-## Paso 4: Lectura de los datos en Python
-
-Una vez exportados los datos desde QGIS, se pueden cargar en Python de acuerdo con el formato elegido:
-
-### 🔹 Lectura de archivos CSV (solo tabla)
-```python
-import pandas as pd
-
-# Ruta del archivo exportado
-df = pd.read_csv("C:/ruta/archivo.csv")
-
-# Visualizar las primeras filas
-print(df.head())
-```
+En el apartado de "tutorial.md" encontrarás la explicación detallada de cada uno de estos pasos.
