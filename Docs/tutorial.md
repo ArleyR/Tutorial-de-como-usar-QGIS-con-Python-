@@ -227,8 +227,6 @@ Luego de tener la base cargada y haber visualizado que este de forma correcta, s
 
 Este apartado muestra **ejemplos prácticos** de lo que puedes hacer una vez exportes tus datos desde QGIS a Python, ya sea en **CSV** (solo tabla) o en **SHP/GPKG** (tabla + geometría).
 
----
-
 ## 1. Análisis básico de tabla (con `pandas`)
 
 Si exportaste solo la **tabla en CSV**, puedes trabajar con `pandas`:
