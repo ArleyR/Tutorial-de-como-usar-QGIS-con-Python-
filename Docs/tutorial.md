@@ -205,12 +205,20 @@ Una vez exportados los datos desde QGIS, se pueden cargar en Python de acuerdo c
 
 ### 🔹 Lectura de archivos CSV (solo tabla)
 python
+```
 import pandas as pd
+```
 
 # Ruta del archivo exportado
+```
 df = pd.read_csv("C:/ruta/archivo.csv")
+```
 
 # Visualizar las primeras filas
+```
 print(df.head())
 ```
 
+# Análisis de los datos
+
+Luego de tener la base cargada y haber visualizado que este de forma correcta, solo queda hacer el análisis que requieras para tus datos!
