@@ -221,4 +221,106 @@ print(df.head())
 
 # Análisis de los datos
 
-Luego de tener la base cargada y haber visualizado que este de forma correcta, solo queda hacer el análisis que requieras para tus datos!
+Luego de tener la base cargada y haber visualizado que este de forma correcta, solo queda hacer el análisis que requieras para tus datos. Aquí te dejamos algunos ejemplos para que empieces a utilizar los datos espaciales en Python.
+
+# Ejemplos de Análisis Espacial en Python con datos de QGIS
+
+Este apartado muestra **ejemplos prácticos** de lo que puedes hacer una vez exportes tus datos desde QGIS a Python, ya sea en **CSV** (solo tabla) o en **SHP/GPKG** (tabla + geometría).
+
+---
+
+## 1. Análisis básico de tabla (con `pandas`)
+
+Si exportaste solo la **tabla en CSV**, puedes trabajar con `pandas`:
+
+```
+import pandas as pd
+
+df = pd.read_csv("datos.csv")
+
+# Ver primeras filas
+print(df.head())
+
+# Conteo de registros por categoría (ejemplo: barrios)
+print(df["BARRIO"].value_counts())
+
+# Promedio de una variable (ejemplo: población)
+print(df["POBLACION"].mean())
+```
+
+## 2. Visualizar mapas simples (con geopandas)
+Si tienes geometría (SHP o GPKG):
+
+```
+import geopandas as gpd
+
+gdf = gpd.read_file("mapa.gpkg")
+
+# Dibujar todo el mapa
+gdf.plot()
+
+# Colorear por una variable (ejemplo: población)
+gdf.plot(column="POBLACION", legend=True, cmap="Blues")
+```
+
+## 3. Cálculo de áreas y perímetros
+Si tus datos son polígonos (ej: barrios, municipios):
+
+```
+# Cambiar proyección a metros (ej: EPSG:3116 para Colombia)
+gdf = gdf.to_crs(epsg=3116)
+
+# Calcular área y perímetro
+gdf["area_m2"] = gdf.geometry.area
+gdf["perimetro_m"] = gdf.geometry.length
+
+print(gdf[["NOMBRE", "area_m2", "perimetro_m"]].head())
+```
+
+## 4. Uniones espaciales (Spatial Join)
+Ejemplo: ¿cuántos puntos de colegios hay en cada barrio?
+
+```
+# Cargar barrios y colegios
+barrios = gpd.read_file("barrios.gpkg")
+colegios = gpd.read_file("colegios.gpkg")
+
+# Unir puntos a polígonos
+join = gpd.sjoin(colegios, barrios, how="left", predicate="within")
+
+# Contar colegios por barrio
+conteo = join.groupby("NOMBRE_BARRIO").size()
+print(conteo)
+```
+
+## 5. Cálculo de distancias
+Ejemplo: distancia de cada colegio al centro de un barrio.
+
+```
+from shapely.geometry import Point
+
+# Centroide de Chapinero
+centro = barrios[barrios["NOMBRE"]=="Chapinero"].geometry.centroid.values[0]
+
+# Calcular distancia de cada colegio al centroide
+colegios["distancia_m"] = colegios.geometry.distance(centro)
+
+print(colegios[["NOMBRE", "distancia_m"]].head())
+```
+
+## 6. Mapas personalizados con Matplotlib
+```
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8,6))
+barrios.plot(ax=ax, color="lightgrey", edgecolor="black")
+colegios.plot(ax=ax, color="red", markersize=10)
+plt.title("Colegios dentro de barrios")
+plt.show()
+```
+
+
+
+
+
+
