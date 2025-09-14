@@ -124,24 +124,17 @@ A continuación, una breve explicación de cada grupo:
 4.	Es recomendable renombrar estas capas para identificarlas fácilmente y evitar confusiones con las capas originales. De lo contrario, podrías perder el rastro de qué operación realizaste en cada capa.
 5.	Es recomendable guardar las capas de resultados para no perder la información. Para hacerlo, puedes guiarte con el procedimiento explicado en el Paso 3, parte 3 (Exportar → Guardar como objeto). 
 
-<img width="921" height="525" alt="image" src="https://github.com/user-attachments/assets/f8b19b8c-21e9-482c-9822-9af92728c10b" />
+<img width="1082" height="559" alt="image" src="https://github.com/user-attachments/assets/32e9f3af-3faa-437a-8afe-300e57a6640d" />
+
+    Como puedes ver, al lado de la capa combinada aparece un cuadro pequeño. Esto significa que los resultados están cargados, pero solo de forma temporal. Si cierras la aplicación, esa información se perderá. Por eso es recomendable guardar la capa siguiendo lo explicado en el Paso 5, parte 5.
+
+## Paso 6: visualización de graficas 
 
 
 
 
 
 
-
-
-
-
-## 7. Herramientas de geoprocesamiento (GUI)
-### Abre la Caja de herramientas de procesamiento (Processing Toolbox).
-
-*	Buffer: Vector general > Buffer o native:buffer.
-*	Clip (recorte): Vector overlay > Clip o native:clip.
-*	Intersect / Union / Dissolve: disponibles bajo Vector > Geoprocesamiento.
-*	Join attributes by location (unión espacial): native:joinattributesbylocation.
 
 ## 8. Modeler (automatizar procesos sin programar)
 *	Processing > Graphical Modeler
