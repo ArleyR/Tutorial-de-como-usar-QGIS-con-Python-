@@ -129,17 +129,64 @@ A continuación, una breve explicación de cada grupo:
     #Como puedes ver, al lado de la capa combinada aparece un cuadro pequeño. Esto significa que los resultados están cargados, pero solo de forma temporal. Si cierras la aplicación, esa información se perderá. Por eso es recomendable guardar la capa siguiendo lo explicado en el Paso 5, parte 5.
 
 ## Paso 6: visualización de graficas 
+1.	Ve al menú Complementos y selecciona Administrar e instalar complementos.
+
+<img width="921" height="108" alt="image" src="https://github.com/user-attachments/assets/12bac589-31b1-42e1-9610-a31926096c11" />
+
+2.	En el buscador escribe DataPlotly, instálalo y, cuando termine, haz clic en Cerrar.
+
+<img width="921" height="718" alt="image" src="https://github.com/user-attachments/assets/5f14e6e2-1fff-405c-ac61-8af59e47a93a" />
+
+3.	En la barra de herramientas, ubica el ícono de DataPlotly (al lado de la consola de Python) y haz clic en él.
+
+<img width="921" height="101" alt="image" src="https://github.com/user-attachments/assets/450f41f1-602e-4d7a-bd85-f070be35a8e8" />
+
+4.	Se abrirá la ventana del complemento
+
+ <img width="677" height="667" alt="image" src="https://github.com/user-attachments/assets/c3d79fa8-f4cd-4329-b2d9-9487c3130617" />
+
+5.	En el ícono con forma de escoba, selecciona la capa vectorial que quieras graficar. Después elige el campo para el eje X (por ejemplo, “Localidad”) y el campo para el eje Y (por ejemplo, “Población”).
+
+<img width="583" height="536" alt="image" src="https://github.com/user-attachments/assets/54b11135-7303-46aa-a56c-a2637e39a49e" />
+
+6.	Escoge el tipo de gráfico: barras, dispersión, histograma, pastel, entre otros. También puedes personalizar colores, títulos y etiquetas.
+7.	Haz clic en Crear diagrama y verás el gráfico en pantalla
+
+<img width="814" height="756" alt="image" src="https://github.com/user-attachments/assets/0f2add2e-9d3f-45de-bb35-6e7864dd8425" />
+
+8.	Si necesitas usarlo en informes o presentaciones, guárdalo con el ícono de Exportar, eligiendo el formato de imagen (.png o .jpg).
 
 
+## Paso 7   instalar el complemento QuickMapServices
+
+1.	Ve al menú Complementos y selecciona Administrar e instalar complementos
+2.	En la pestaña Todos, escribe en el buscador QuickMapServices.
+3.	Selecciona el complemento y haz clic en Instalar complemento.
+4.	Una vez finalizada la instalación, haz clic en Cerrar para salir de la ventana.
+
+  Ahora agregar mapa:
+  1.	En el menú superior, ve a Web → QuickMapServices → Settings.
+
+  <img width="733" height="913" alt="image" src="https://github.com/user-attachments/assets/cd3ba0b6-0c32-4908-b0f1-5c800a99173b" />
+
+  2.	En la pestaña More services, haz clic en Get contributed pack para activar más proveedores de mapas.
+  
+  <img width="888" height="697" alt="image" src="https://github.com/user-attachments/assets/5606ba75-14ca-46eb-a78d-c37087eb3da3" />
+
+  3.	Cierra la ventana de configuración.
+  4.	Ahora dirígete a Web → QuickMapServices → Google → Google Satellite Hybrid para cargar el mapa satelital.
+
+  <img width="921" height="847" alt="image" src="https://github.com/user-attachments/assets/068b94ef-1c2a-4791-8845-89998a9236bd" />        <img width="921" height="904" alt="image" src="https://github.com/user-attachments/assets/1aad1605-b09e-4321-b853-e3991564865f" />
+
+  5.	Si necesitas ajustar la transparencia, haz clic derecho sobre la capa, selecciona Propiedades, entra a la opción Transparencia y          configúrala entre 70–80% para visualizar mejor tus capas vectoriales.
+
+  Añadir Límites:
+  1.	Web → QuickMapServices → OSM → OSM Standard
+     <img width="921" height="752" alt="image" src="https://github.com/user-attachments/assets/0dd8f712-75c5-42ae-b9aa-f65916225969" />
+
+  	
 
 
-
-
-
-## 8. Modeler (automatizar procesos sin programar)
-*	Processing > Graphical Modeler
-*	Arrastra herramientas (Buffer, Clip, Join) y conecta entradas/salidas.
-*	Guarda el modelo; podrás ejecutarlo con parámetros y usarlo como herramienta.
 
 ## 9. Guardar resultados y formatos recomendados
 *	GeoPackage (.gpkg): recomendado para múltiples capas y atributos modernos.
