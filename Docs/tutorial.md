@@ -65,9 +65,11 @@ Opción A: Descargar los datos desde Mapas Bogotá
 
 ### Otra forma de cargar los datos:
 1.	En QGIS, ve al menú Capa → Añadir capa → Añadir capa vectorial.
+
 <img width="873" height="444" alt="image" src="https://github.com/user-attachments/assets/5bb1fda6-1281-4973-98f5-64b9297242de" />
 
 2.	En la sección Fuente, haz clic en los tres puntos (…) y navega hasta la carpeta donde guardaste tus capas
+
 <img width="870" height="550" alt="image" src="https://github.com/user-attachments/assets/0c024a73-a3f6-4bd6-b88a-a0f7d77b45a2" />
 
 3.	Selecciona los archivos y haz clic en Añadir; las capas deberían aparecer en el panel de capas de QGIS
@@ -75,13 +77,16 @@ Opción A: Descargar los datos desde Mapas Bogotá
 
 ## PASO 4 CONFIGURACIÓN DE COLORES 
 1.	 Haz clic derecho sobre la capa y selecciona Propiedades.
+
 <img width="450" height="460" alt="image" src="https://github.com/user-attachments/assets/b40b4853-4c78-48dc-a599-2e28b772b7fd" />
 
 2.	En la ventana que se abre, ubícate en la pestaña Simbología.
+
 <img width="535" height="415" alt="image" src="https://github.com/user-attachments/assets/cf1b566b-4182-4855-953e-048a119aa2ed" />
 
 3.	Selecciona el Marcador simple y allí podrás cambiar el tamaño, el color de relleno, el estilo de la marca y otros parámetros de visualización.
 4.	En la parte superior de la ventana de Simbología, aparece un cuadro con el nombre Símbolo único. Desde allí puedes cambiar el tipo de simbología (por ejemplo: categorías, graduado, etc.), lo que permite representar la información de manera más detallada.
+
 <img width="836" height="232" alt="image" src="https://github.com/user-attachments/assets/18017830-a364-4c7d-a0d9-6628422f658e" />
 
 5.	Finalmente, haz clic en Aplicar y luego en Aceptar para guardar los cambios.
@@ -89,14 +94,17 @@ Opción A: Descargar los datos desde Mapas Bogotá
 
 ## PASO 5: Uso de Herramientas Vectoriales
 1.	En el menú superior de QGIS, haz clic en Vectorial. Allí encontrarás varias carpetas de herramientas que te permiten analizar y transformar tus datos
+
 <img width="347" height="258" alt="image" src="https://github.com/user-attachments/assets/02f2d7bb-4758-4050-87e2-3a2deb02b799" />
 
 A continuación, una breve explicación de cada grupo:
    * Analysis Tools: Son herramientas de análisis de datos espaciales, como las que ya vimos (estadísticas básicas, contar puntos en           polígonos, matriz de distancias, etc.
+
      <img width="609" height="266" alt="image" src="https://github.com/user-attachments/assets/f02f7eff-f8fc-4005-89cc-77cac47860b1" />
 
    * Geoprocessing Tools: Son operaciones geométricas que se hacen sobre polígonos, líneas o puntos.
      Incluyen: Buffer, Intersección, Unión, Diferencia, Cortar, etc.
+
      <img width="592" height="296" alt="image" src="https://github.com/user-attachments/assets/c3764c45-295d-4cb7-ab88-50f0552f8f61" />
 
    * Geometry Tools: Permite hacer análisis y ediciones geométricas más específicas: calcular centroides, extraer vértices, convertir          geometrías, calcular áreas o longitudes.
