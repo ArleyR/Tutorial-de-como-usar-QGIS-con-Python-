@@ -1,6 +1,6 @@
 # Tutorial para usar QGIS
 
-## 1. Introducción 
+## Introducción 
 
 QGIS (Quantum GIS) es un software libre y de código abierto diseñado para trabajar con información geográfica. Con él es posible visualizar, analizar y editar datos espaciales en diferentes formatos, así como crear mapas personalizados. Su uso abarca múltiples áreas como la planificación urbana, el medio ambiente, la ingeniería, la agricultura y la gestión territorial.
 
@@ -12,39 +12,120 @@ Además, gracias a Python es posible desarrollar plugins personalizados que ampl
 Versión recomendada: QGIS 3.x (3.10+). Las instrucciones son aplicables a la mayoría de versiones 3.x; pequeñas diferencias de menú pueden existir.
 QGIS instalado (Windows con OSGeo4W, macOS o Linux), datos vectoriales/raster (Shapefile, GeoPackage, GeoTIFF, GeoJSON), espacio de trabajo donde guardar salidas.
 
-## 2. Interfaz rápida (qué ver y para qué)
+## Paso a paso para la creación de un proyecto Proyecto
+### Paso 1 Configurar QGIS para Colombia Bogotá
+1.	Abrir la aplicación QGIS
+2.	Ir a Proyecto, → Propiedades → SRC 
+3.	En la opción Filtrar, escribe EPSG:3116 – MAGNA-SIRGAS / Colombia Bogotá zone. Selecciónalo, luego haz clic en Aplicar y después en Aceptar.
 
-*	Panel Capas (Layers): lista de capas del proyecto.
-* Panel Navegador (Browser): arrastra capas desde carpetas, GeoPackage, PostGIS.
-* Proyectos: abrir/guardar proyecto, selección.
-* Caja de herramientas de procesamiento (Processing Toolbox): aquí están todos los algoritmos (GDAL, GRASS, SAGA, QGIS nativos).
-* Consola Python (Python Console): para scripts PyQGIS interactivos.
-* Layout (Compositor de impresión): para producir mapas finales (PDF, PNG).
+<img width="678" height="495" alt="image" src="https://github.com/user-attachments/assets/f01b27c4-6141-4b3b-ad00-964af70d78f6" />
 
-## 3. Flujo de trabajo básico (pasos generales)
-* Crear/abrir un proyecto: Proyecto > Nuevo o Archivo > Abrir proyecto.
-* Definir CRS del proyecto: Proyecto > Propiedades del proyecto > CRS (importantísimo: trabaja en CRS apropiado para tu análisis).
-* Cargar datos (vector/raster) desde Capa > Añadir capa > Añadir capa vectorial o arrastrando desde el Navegador.
-* Inspeccionar atributos (abrir tabla de atributos) y geometrías.
-* Diseñar mapa en Layout y exportar.
+4.	Luego Vuelve al menú Proyecto y selecciona Guardar como…. Escribe un nombre para tu proyecto (ejemplo: Mapa_Bogotá) y asegúrate de guardarlo en formato .qgz (formato de QGIS).
 
-## 4. Cómo cargar datos (GUI)
-### Vector (Shapefile, GeoPackage, GeoJSON)
-* Capa > Añadir capa > Añadir capa vectorial....
-* Selecciona archivo (browse) o usa el Navegador y arrastra la capa.
-* Revisa la tabla de atributos (clic derecho sobre la capa > Abrir tabla de atributos).
-### Raster (GeoTIFF, JPEG, etc.)
-* Capa > Añadir capa > Añadir capa raster....
-* Selecciona el archivo TIFF/IMG.
-* Si no se muestra correctamente, revisa CRS o georreferenciación.
+### 3. PASO 2 Descarga los mapas vectoriales 
+Opción A: Descargar los datos desde Mapas Bogotá
+1.	Ir al navegador web
+2.	Ir a la página: [Mapas Bogotá](https://mapas.bogota.gov.co/#)  
+3.	En el portal de Mapas Bogotá, selecciona la opción Ver datos (puedes elegir por Temática o por Sector).
+4.	Haz clic en Más información en el conjunto de datos que quieras descargar; esto te llevará al portal de Datos Abiertos de Bogotá.
 
-## 5. Reproyección y sistema de coordenadas 
-* Para reproyectar una capa (guardar copia con otro CRS): clic derecho sobre la capa > Exportar > Guardar objetos como... > elegir CRS objetivo (por ejemplo, EPSG:4326 o un CRS proyectado local
+.<img width="578" height="395" alt="image" src="https://github.com/user-attachments/assets/2b802948-c731-4f85-b34d-8a4d7b449262" />
 
-## 6. Simbología y etiquetado
-•	Clic derecho sobre la capa > Propiedades > Simbología
-•	Elige tipo: Simple, Graduado (para rangos), Categorized (por categorías), Rule-based (reglas complejas).
-•	Para etiquetas: Etiquetado > Mostrar etiquetas > elegir campo.
+5.	En el listado de formatos disponibles, busca el archivo Shapefile (.shp), selecciona Exportar y luego haz clic en Descargar.
+6.	Y Repite este mismo procedimiento con las demás bases que necesites de Mapas Bogotá.
+7.	En caso de que prefieras descargar directamente desde el portal de Datos Abiertos de Bogotá, busca la temática que te interese, selecciona la base correspondiente y asegúrate de que tenga el formato Shapefile (.shp). Luego sigue el mismo proceso explicado en los pasos anteriores para exportar y descargar.
+
+### Opción B: Descargar las bases de Localidades y UPZ desde el Laboratorio Urbano de Bogotá
+1.	Ir al navegador web
+2.	Para descargar las Localidades, ingresa a: [Localidades](https://bogota-laburbano.opendatasoft.com/explore/dataset/poligonos-localidades/table/)
+3.	Para descargar las UPZ, ingresa a: [UPZ](https://bogota-laburbano.opendatasoft.com/explore/dataset/upz-bogota/table/)
+4.	En cada página, selecciona la opción Exportar.
+5.	Descarga los archivos en formato Shapefile (.shp).
+
+
+
+## PASO 3 Verificación de la carga de los datos
+1.	 Arrastra los archivos descargados al panel de capas de QGIS; allí podrás verlos cargados en el proyecto.
+
+<img width="780" height="408" alt="image" src="https://github.com/user-attachments/assets/db35f3e3-0081-4a30-8055-bc4c80a73b93" />
+
+2.	Haz clic derecho sobre una capa para acceder a sus opciones: abrir la tabla de atributos, duplicar la capa, cambiar el nombre, o ver y modificar el SRC de la capa, entre otras.
+
+<img width="303" height="352" alt="image" src="https://github.com/user-attachments/assets/929a2e94-8db5-477e-9061-03b75baae1cd" />
+
+
+3.	Verifica que las capas tengan asignado el sistema de coordenadas EPSG:3116 – MAGNA-SIRGAS / Colombia Bogotá zone. Si no lo tienen, corrígelo: ve a Exportar → Guardar como…, asigna un nombre al archivo (preferiblemente el mismo nombre original) y selecciona el SRC correcto (EPSG:3116).
+
+<img width="347" height="389" alt="image" src="https://github.com/user-attachments/assets/35eee38f-9440-49d1-a8bd-30bc1582fcf7" />
+
+4.	Una vez hecho esto, deberías visualizar correctamente el mapa de Bogotá en la pantalla de QGIS.
+
+<img width="398" height="353" alt="image" src="https://github.com/user-attachments/assets/a8aee186-34e5-431e-b8d5-b7a37a816210" />
+
+
+### Otra forma de cargar los datos:
+1.	En QGIS, ve al menú Capa → Añadir capa → Añadir capa vectorial.
+<img width="873" height="444" alt="image" src="https://github.com/user-attachments/assets/5bb1fda6-1281-4973-98f5-64b9297242de" />
+
+2.	En la sección Fuente, haz clic en los tres puntos (…) y navega hasta la carpeta donde guardaste tus capas
+<img width="870" height="550" alt="image" src="https://github.com/user-attachments/assets/0c024a73-a3f6-4bd6-b88a-a0f7d77b45a2" />
+
+3.	Selecciona los archivos y haz clic en Añadir; las capas deberían aparecer en el panel de capas de QGIS
+
+
+## PASO 4 CONFIGURACIÓN DE COLORES 
+1.	 Haz clic derecho sobre la capa y selecciona Propiedades.
+<img width="450" height="460" alt="image" src="https://github.com/user-attachments/assets/b40b4853-4c78-48dc-a599-2e28b772b7fd" />
+
+2.	En la ventana que se abre, ubícate en la pestaña Simbología.
+<img width="535" height="415" alt="image" src="https://github.com/user-attachments/assets/cf1b566b-4182-4855-953e-048a119aa2ed" />
+
+3.	Selecciona el Marcador simple y allí podrás cambiar el tamaño, el color de relleno, el estilo de la marca y otros parámetros de visualización.
+4.	En la parte superior de la ventana de Simbología, aparece un cuadro con el nombre Símbolo único. Desde allí puedes cambiar el tipo de simbología (por ejemplo: categorías, graduado, etc.), lo que permite representar la información de manera más detallada.
+<img width="836" height="232" alt="image" src="https://github.com/user-attachments/assets/18017830-a364-4c7d-a0d9-6628422f658e" />
+
+5.	Finalmente, haz clic en Aplicar y luego en Aceptar para guardar los cambios.
+6.	Repite este proceso con las demás capas para que todas tengan una visualización clara y coherente.
+
+## PASO 5: Uso de Herramientas Vectoriales
+1.	En el menú superior de QGIS, haz clic en Vectorial. Allí encontrarás varias carpetas de herramientas que te permiten analizar y transformar tus datos
+<img width="347" height="258" alt="image" src="https://github.com/user-attachments/assets/02f2d7bb-4758-4050-87e2-3a2deb02b799" />
+
+A continuación, una breve explicación de cada grupo:
+   * Analysis Tools: Son herramientas de análisis de datos espaciales, como las que ya vimos (estadísticas básicas, contar puntos en           polígonos, matriz de distancias, etc.
+     <img width="609" height="266" alt="image" src="https://github.com/user-attachments/assets/f02f7eff-f8fc-4005-89cc-77cac47860b1" />
+
+   * Geoprocessing Tools: Son operaciones geométricas que se hacen sobre polígonos, líneas o puntos.
+     Incluyen: Buffer, Intersección, Unión, Diferencia, Cortar, etc.
+     <img width="592" height="296" alt="image" src="https://github.com/user-attachments/assets/c3764c45-295d-4cb7-ab88-50f0552f8f61" />
+
+   * Geometry Tools: Permite hacer análisis y ediciones geométricas más específicas: calcular centroides, extraer vértices, convertir          geometrías, calcular áreas o longitudes.
+
+     <img width="447" height="332" alt="image" src="https://github.com/user-attachments/assets/1389ace1-e048-4b71-8a9e-e89a35fd6186" />
+
+   * Research Tools: Son herramientas de exploración: seleccionar por ubicación, localizar por atributo, buscar vecinos más cercanos,etc.
+     
+     <img width="513" height="370" alt="image" src="https://github.com/user-attachments/assets/00eef671-4798-4f8e-a7b3-88454fe2c293" />
+
+   * Data Management Tools: Se enfocan en la gestión de capas: unir tablas, dividir una capa por atributos, exportar campos, convertir         formatos, etc.
+     
+     <img width="586" height="286" alt="image" src="https://github.com/user-attachments/assets/f0c780f4-5282-4561-9cf1-6beeb8002896" />
+
+2.	Estas herramientas te permiten analizar y transformar tus datos vectoriales de manera sencilla.
+3.	Cuando realices una operación con estas herramientas (como unir capas, contar puntos en un polígono, calcular distancias, etc.), QGIS genera automáticamente una nueva capa de resultados.
+4.	Es recomendable renombrar estas capas para identificarlas fácilmente y evitar confusiones con las capas originales. De lo contrario, podrías perder el rastro de qué operación realizaste en cada capa.
+5.	Es recomendable guardar las capas de resultados para no perder la información. Para hacerlo, puedes guiarte con el procedimiento explicado en el Paso 3, parte 3 (Exportar → Guardar como objeto). 
+
+<img width="921" height="525" alt="image" src="https://github.com/user-attachments/assets/f8b19b8c-21e9-482c-9822-9af92728c10b" />
+
+
+
+
+
+
+
+
+
 
 ## 7. Herramientas de geoprocesamiento (GUI)
 ### Abre la Caja de herramientas de procesamiento (Processing Toolbox).
