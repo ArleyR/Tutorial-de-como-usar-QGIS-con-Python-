@@ -126,7 +126,7 @@ A continuación, una breve explicación de cada grupo:
 
 <img width="1082" height="559" alt="image" src="https://github.com/user-attachments/assets/32e9f3af-3faa-437a-8afe-300e57a6640d" />
 
-    Como puedes ver, al lado de la capa combinada aparece un cuadro pequeño. Esto significa que los resultados están cargados, pero solo de forma temporal. Si cierras la aplicación, esa información se perderá. Por eso es recomendable guardar la capa siguiendo lo explicado en el Paso 5, parte 5.
+    #Como puedes ver, al lado de la capa combinada aparece un cuadro pequeño. Esto significa que los resultados están cargados, pero solo de forma temporal. Si cierras la aplicación, esa información se perderá. Por eso es recomendable guardar la capa siguiendo lo explicado en el Paso 5, parte 5.
 
 ## Paso 6: visualización de graficas 
 
