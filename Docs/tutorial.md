@@ -32,9 +32,12 @@ Opción A: Descargar los datos desde Mapas Bogotá
 <p align="center">
 .<img width="578" height="395" alt="image" src="https://github.com/user-attachments/assets/2b802948-c731-4f85-b34d-8a4d7b449262" />
 </p>
-5.	En el listado de formatos disponibles, busca el archivo Shapefile (.shp), selecciona Exportar y luego haz clic en Descargar.
-6.	Y Repite este mismo procedimiento con las demás bases que necesites de Mapas Bogotá.
-7.	En caso de que prefieras descargar directamente desde el portal de Datos Abiertos de Bogotá, busca la temática que te interese, selecciona la base correspondiente y asegúrate de que tenga el formato Shapefile (.shp). Luego sigue el mismo proceso explicado en los pasos anteriores para exportar y descargar.
+
+5. En el listado de formatos disponibles, busca el archivo Shapefile (.shp), selecciona Exportar y luego haz clic en Descargar.
+
+6. Y Repite este mismo procedimiento con las demás bases que necesites de Mapas Bogotá.
+
+7. En caso de que prefieras descargar directamente desde el portal de Datos Abiertos de Bogotá, busca la temática que te interese, selecciona la base correspondiente y asegúrate de que tenga el formato Shapefile (.shp). Luego sigue el mismo proceso explicado en los pasos anteriores para exportar y descargar.
 
 ### Opción B: Descargar las bases de Localidades y UPZ desde el Laboratorio Urbano de Bogotá
 1.	Ir al navegador web
@@ -55,7 +58,7 @@ Opción A: Descargar los datos desde Mapas Bogotá
 <img width="303" height="352" alt="image" src="https://github.com/user-attachments/assets/929a2e94-8db5-477e-9061-03b75baae1cd" />
 </p>
 
-3.	Verifica que las capas tengan asignado el sistema de coordenadas EPSG:3116 – MAGNA-SIRGAS / Colombia Bogotá zone. Si no lo tienen, corrígelo: ve a Exportar → Guardar como…, asigna un nombre al archivo (preferiblemente el mismo nombre original) y selecciona el SRC correcto (EPSG:3116).
+3.	Verifica que las capas tengan asignado el sistema de coordenadas EPSG:3116 – MAGNA-SIRGAS / Colombia Bogotá zone. (Si no lo tienen, corrígelo): ve a Exportar → Guardar como…, asigna un nombre al archivo (preferiblemente el mismo nombre original) y selecciona el SRC correcto (EPSG:3116).
 <p align="center">
 <img width="347" height="389" alt="image" src="https://github.com/user-attachments/assets/35eee38f-9440-49d1-a8bd-30bc1582fcf7" />
 </p>
@@ -85,8 +88,11 @@ Opción A: Descargar los datos desde Mapas Bogotá
 <p align="center">
 <img width="535" height="415" alt="image" src="https://github.com/user-attachments/assets/cf1b566b-4182-4855-953e-048a119aa2ed" />
 </p>
-3.	Selecciona el Marcador simple y allí podrás cambiar el tamaño, el color de relleno, el estilo de la marca y otros parámetros de visualización.
-4.	En la parte superior de la ventana de Simbología, aparece un cuadro con el nombre Símbolo único. Desde allí puedes cambiar el tipo de simbología (por ejemplo: categorías, graduado, etc.), lo que permite representar la información de manera más detallada.
+
+3. Selecciona el Marcador simple y allí podrás cambiar el tamaño, el color de relleno, el estilo de la marca y otros parámetros de visualización.
+
+4. En la parte superior de la ventana de Simbología, aparece un cuadro con el nombre Símbolo único. Desde allí puedes cambiar el tipo de simbología (por ejemplo: categorías, graduado, etc.), lo que permite representar la información de manera más detallada.
+
 <p align="center">
 <img width="836" height="232" alt="image" src="https://github.com/user-attachments/assets/18017830-a364-4c7d-a0d9-6628422f658e" />
 </p>
@@ -99,7 +105,7 @@ Opción A: Descargar los datos desde Mapas Bogotá
 <img width="347" height="258" alt="image" src="https://github.com/user-attachments/assets/02f2d7bb-4758-4050-87e2-3a2deb02b799" />
 </p>
 A continuación, una breve explicación de cada grupo:
-   * Analysis Tools: Son herramientas de análisis de datos espaciales, como las que ya vimos (estadísticas básicas, contar puntos en           polígonos, matriz de distancias, etc.
+   * Analysis Tools: Son herramientas de análisis de datos espaciales, como las que ya vimos (estadísticas básicas, contar puntos en polígonos, matriz de distancias, etc).
      <p align="center">
      <img width="609" height="266" alt="image" src="https://github.com/user-attachments/assets/f02f7eff-f8fc-4005-89cc-77cac47860b1" />
       </p>
@@ -145,19 +151,26 @@ A continuación, una breve explicación de cada grupo:
 <p align="center">
 <img width="921" height="101" alt="image" src="https://github.com/user-attachments/assets/450f41f1-602e-4d7a-bd85-f070be35a8e8" />
 </p>
+
 4.	Se abrirá la ventana del complemento
 <p align="center">
 <img width="677" height="667" alt="image" src="https://github.com/user-attachments/assets/c3d79fa8-f4cd-4329-b2d9-9487c3130617" />
 </p>
+
 5.	En el ícono con forma de escoba, selecciona la capa vectorial que quieras graficar. Después elige el campo para el eje X (por ejemplo, “Localidad”) y el campo para el eje Y (por ejemplo, “Población”).
+
 <p align="center">
 <img width="583" height="536" alt="image" src="https://github.com/user-attachments/assets/54b11135-7303-46aa-a56c-a2637e39a49e" />
 </p>
-6.	Escoge el tipo de gráfico: barras, dispersión, histograma, pastel, entre otros. También puedes personalizar colores, títulos y etiquetas.
-7.	Haz clic en Crear diagrama y verás el gráfico en pantalla
+
+6. Escoge el tipo de gráfico: barras, dispersión, histograma, pastel, entre otros. También puedes personalizar colores, títulos y etiquetas.
+
+7. Haz clic en Crear diagrama y verás el gráfico en pantalla.
+
 <p align="center">
 <img width="814" height="756" alt="image" src="https://github.com/user-attachments/assets/0f2add2e-9d3f-45de-bb35-6e7864dd8425" />
 </p>
+
 8.	Si necesitas usarlo en informes o presentaciones, guárdalo con el ícono de Exportar, eligiendo el formato de imagen (.png o .jpg).
 
 
@@ -170,15 +183,20 @@ A continuación, una breve explicación de cada grupo:
 
   Ahora agregar mapa:
   1.	En el menú superior, ve a Web → QuickMapServices → Settings.
+  
   <p align="center">
   <img width="733" height="913" alt="image" src="https://github.com/user-attachments/assets/cd3ba0b6-0c32-4908-b0f1-5c800a99173b" />
   </p>
+  
   2.	En la pestaña More services, haz clic en Get contributed pack para activar más proveedores de mapas.
+  
   <p align="center">
   <img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/5606ba75-14ca-46eb-a78d-c37087eb3da3" />
   </p>
-  3.	Cierra la ventana de configuración.
-  4.	Ahora dirígete a Web → QuickMapServices → Google → Google Satellite Hybrid para cargar el mapa satelital.
+  
+  3. Cierra la ventana de configuración.
+  
+  4. Ahora dirígete a Web → QuickMapServices → Google → Google Satellite Hybrid para cargar el mapa satelital.
 
   <p align="center">
   <img src="https://github.com/user-attachments/assets/068b94ef-1c2a-4791-8845-89998a9236bd" alt="Imagen 1" style="width:600px; height:400px; object-fit:cover; margin-right:15px;" />
@@ -201,19 +219,27 @@ A continuación, una breve explicación de cada grupo:
 <p align="center">
 <img width="577" height="278" alt="image" src="https://github.com/user-attachments/assets/034d4f94-b816-49e9-9ff9-f8d3b8ed595e" />
 </p>
-3.	En el menú de la composición, dirígete a Añadir elementos.
-4.	Allí encontrarás opciones como añadir mapa, imágenes, etiquetas, flecha del norte, escala, entre otros. También puedes ver estas herramientas en la parte izquierda de la pantalla.
+
+3. En el menú de la composición, dirígete a Añadir elementos.
+
+4. Allí encontrarás opciones como añadir mapa, imágenes, etiquetas, flecha del norte, escala, entre otros. También puedes ver estas herramientas en la parte izquierda de la pantalla.
+
 <p align="center">
 <img width="847" height="476" alt="image" src="https://github.com/user-attachments/assets/d85cbf1f-7ccb-4762-af74-772710942a64" />
 </p>
+
 5.	Para agregar un título, selecciona Añadir etiqueta. Desde ahí puedes escribir el nombre del mapa, además de cambiar el color, tipo de letra y tamaño del texto.
+
 <p align="center">
 <img width="506" height="630" alt="image" src="https://github.com/user-attachments/assets/6e8a3dbe-74cc-4c95-beaf-e7da169586f0" />
 </p>
+
 6.	Una vez añadidos todos los elementos, tu mapa quedará listo para impresión
+
 <p align="center">
 <img width="921" height="471" alt="image" src="https://github.com/user-attachments/assets/4c367a21-45f9-4c1b-98b7-99c62e463cc5" />
 </p>
+
 7.	Finalmente, en el menú selecciona Exportar a PDF, haz clic y guarda tu mapa en tu computador. 
 
 
