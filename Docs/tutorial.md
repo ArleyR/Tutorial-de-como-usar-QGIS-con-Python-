@@ -18,9 +18,9 @@ Para este ejercicio utilizaremos bases de datos disponibles en la plataforma Bog
 1.	Abrir la aplicación QGIS
 2.	Ir a Proyecto, → Propiedades → SRC 
 3.	En la opción Filtrar, escribe EPSG:3116 – MAGNA-SIRGAS / Colombia Bogotá zone. Selecciónalo, luego haz clic en Aplicar y después en Aceptar.
-
+<p align="center">
 <img width="678" height="495" alt="image" src="https://github.com/user-attachments/assets/f01b27c4-6141-4b3b-ad00-964af70d78f6" />
-
+</p>
 4.	Luego Vuelve al menú Proyecto y selecciona Guardar como…. Escribe un nombre para tu proyecto (ejemplo: Mapa_Bogotá) y asegúrate de guardarlo en formato .qgz (formato de QGIS).
 
 ###  PASO 2 Descarga los mapas vectoriales 
@@ -29,9 +29,9 @@ Opción A: Descargar los datos desde Mapas Bogotá
 2.	Ir a la página: [Mapas Bogotá](https://mapas.bogota.gov.co/#)  
 3.	En el portal de Mapas Bogotá, selecciona la opción Ver datos (puedes elegir por Temática o por Sector).
 4.	Haz clic en Más información en el conjunto de datos que quieras descargar; esto te llevará al portal de Datos Abiertos de Bogotá.
-
+<p align="center">
 .<img width="578" height="395" alt="image" src="https://github.com/user-attachments/assets/2b802948-c731-4f85-b34d-8a4d7b449262" />
-
+</p>
 5.	En el listado de formatos disponibles, busca el archivo Shapefile (.shp), selecciona Exportar y luego haz clic en Descargar.
 6.	Y Repite este mismo procedimiento con las demás bases que necesites de Mapas Bogotá.
 7.	En caso de que prefieras descargar directamente desde el portal de Datos Abiertos de Bogotá, busca la temática que te interese, selecciona la base correspondiente y asegúrate de que tenga el formato Shapefile (.shp). Luego sigue el mismo proceso explicado en los pasos anteriores para exportar y descargar.
@@ -47,114 +47,117 @@ Opción A: Descargar los datos desde Mapas Bogotá
 
 ## PASO 3 Verificación de la carga de los datos
 1.	 Arrastra los archivos descargados al panel de capas de QGIS; allí podrás verlos cargados en el proyecto.
-
+<p align="center">
 <img width="780" height="408" alt="image" src="https://github.com/user-attachments/assets/db35f3e3-0081-4a30-8055-bc4c80a73b93" />
-
+</p>
 2.	Haz clic derecho sobre una capa para acceder a sus opciones: abrir la tabla de atributos, duplicar la capa, cambiar el nombre, o ver y modificar el SRC de la capa, entre otras.
-
+<p align="center">
 <img width="303" height="352" alt="image" src="https://github.com/user-attachments/assets/929a2e94-8db5-477e-9061-03b75baae1cd" />
-
+</p>
 
 3.	Verifica que las capas tengan asignado el sistema de coordenadas EPSG:3116 – MAGNA-SIRGAS / Colombia Bogotá zone. Si no lo tienen, corrígelo: ve a Exportar → Guardar como…, asigna un nombre al archivo (preferiblemente el mismo nombre original) y selecciona el SRC correcto (EPSG:3116).
-
+<p align="center">
 <img width="347" height="389" alt="image" src="https://github.com/user-attachments/assets/35eee38f-9440-49d1-a8bd-30bc1582fcf7" />
-
+</p>
 4.	Una vez hecho esto, deberías visualizar correctamente el mapa de Bogotá en la pantalla de QGIS.
-
+<p align="center">
 <img width="398" height="353" alt="image" src="https://github.com/user-attachments/assets/a8aee186-34e5-431e-b8d5-b7a37a816210" />
-
+</p>
 
 ### Otra forma de cargar los datos:
 1.	En QGIS, ve al menú Capa → Añadir capa → Añadir capa vectorial.
-
+<p align="center">
 <img width="873" height="444" alt="image" src="https://github.com/user-attachments/assets/5bb1fda6-1281-4973-98f5-64b9297242de" />
-
+</p>
 2.	En la sección Fuente, haz clic en los tres puntos (…) y navega hasta la carpeta donde guardaste tus capas
-
+<p align="center">
 <img width="870" height="550" alt="image" src="https://github.com/user-attachments/assets/0c024a73-a3f6-4bd6-b88a-a0f7d77b45a2" />
-
+</p>
 3.	Selecciona los archivos y haz clic en Añadir; las capas deberían aparecer en el panel de capas de QGIS
 
 
 ## PASO 4 CONFIGURACIÓN DE COLORES 
 1.	 Haz clic derecho sobre la capa y selecciona Propiedades.
-
+<p align="center">
 <img width="450" height="460" alt="image" src="https://github.com/user-attachments/assets/b40b4853-4c78-48dc-a599-2e28b772b7fd" />
-
+</p>
 2.	En la ventana que se abre, ubícate en la pestaña Simbología.
-
+<p align="center">
 <img width="535" height="415" alt="image" src="https://github.com/user-attachments/assets/cf1b566b-4182-4855-953e-048a119aa2ed" />
-
+</p>
 3.	Selecciona el Marcador simple y allí podrás cambiar el tamaño, el color de relleno, el estilo de la marca y otros parámetros de visualización.
 4.	En la parte superior de la ventana de Simbología, aparece un cuadro con el nombre Símbolo único. Desde allí puedes cambiar el tipo de simbología (por ejemplo: categorías, graduado, etc.), lo que permite representar la información de manera más detallada.
-
+<p align="center">
 <img width="836" height="232" alt="image" src="https://github.com/user-attachments/assets/18017830-a364-4c7d-a0d9-6628422f658e" />
-
+</p>
 5.	Finalmente, haz clic en Aplicar y luego en Aceptar para guardar los cambios.
 6.	Repite este proceso con las demás capas para que todas tengan una visualización clara y coherente.
 
 ## PASO 5: Uso de Herramientas Vectoriales
 1.	En el menú superior de QGIS, haz clic en Vectorial. Allí encontrarás varias carpetas de herramientas que te permiten analizar y transformar tus datos
-
+<p align="center">
 <img width="347" height="258" alt="image" src="https://github.com/user-attachments/assets/02f2d7bb-4758-4050-87e2-3a2deb02b799" />
-
+</p>
 A continuación, una breve explicación de cada grupo:
    * Analysis Tools: Son herramientas de análisis de datos espaciales, como las que ya vimos (estadísticas básicas, contar puntos en           polígonos, matriz de distancias, etc.
-
+     <p align="center">
      <img width="609" height="266" alt="image" src="https://github.com/user-attachments/assets/f02f7eff-f8fc-4005-89cc-77cac47860b1" />
-
+      </p>
    * Geoprocessing Tools: Son operaciones geométricas que se hacen sobre polígonos, líneas o puntos.
      Incluyen: Buffer, Intersección, Unión, Diferencia, Cortar, etc.
-
+     <p align="center">
      <img width="592" height="296" alt="image" src="https://github.com/user-attachments/assets/c3764c45-295d-4cb7-ab88-50f0552f8f61" />
+     </p>
 
    * Geometry Tools: Permite hacer análisis y ediciones geométricas más específicas: calcular centroides, extraer vértices, convertir          geometrías, calcular áreas o longitudes.
-
+     <p align="center">
      <img width="447" height="332" alt="image" src="https://github.com/user-attachments/assets/1389ace1-e048-4b71-8a9e-e89a35fd6186" />
-
+     </p>
    * Research Tools: Son herramientas de exploración: seleccionar por ubicación, localizar por atributo, buscar vecinos más cercanos,etc.
-     
+     <p align="center">
      <img width="513" height="370" alt="image" src="https://github.com/user-attachments/assets/00eef671-4798-4f8e-a7b3-88454fe2c293" />
-
+     </p>
    * Data Management Tools: Se enfocan en la gestión de capas: unir tablas, dividir una capa por atributos, exportar campos, convertir         formatos, etc.
-     
+     <p align="center">
      <img width="586" height="286" alt="image" src="https://github.com/user-attachments/assets/f0c780f4-5282-4561-9cf1-6beeb8002896" />
+     </p>
 
 2.	Estas herramientas te permiten analizar y transformar tus datos vectoriales de manera sencilla.
 3.	Cuando realices una operación con estas herramientas (como unir capas, contar puntos en un polígono, calcular distancias, etc.), QGIS genera automáticamente una nueva capa de resultados.
 4.	Es recomendable renombrar estas capas para identificarlas fácilmente y evitar confusiones con las capas originales. De lo contrario, podrías perder el rastro de qué operación realizaste en cada capa.
 5.	Es recomendable guardar las capas de resultados para no perder la información. Para hacerlo, puedes guiarte con el procedimiento explicado en el Paso 3, parte 3 (Exportar → Guardar como objeto). 
-
+<p align="center">
 <img width="1082" height="559" alt="image" src="https://github.com/user-attachments/assets/32e9f3af-3faa-437a-8afe-300e57a6640d" />
-
+</p>
+  
     #Como puedes ver, al lado de la capa combinada aparece un cuadro pequeño. Esto significa que los resultados están cargados, pero solo de forma temporal. Si cierras la aplicación, esa información se perderá. Por eso es recomendable guardar la capa siguiendo lo explicado en el Paso 5, parte 5.
 
 ## Paso 6: visualización de graficas 
 1.	Ve al menú Complementos y selecciona Administrar e instalar complementos.
-
+<p align="center">
 <img width="921" height="108" alt="image" src="https://github.com/user-attachments/assets/12bac589-31b1-42e1-9610-a31926096c11" />
-
+</p>
 2.	En el buscador escribe DataPlotly, instálalo y, cuando termine, haz clic en Cerrar.
-
+<p align="center">
 <img width="921" height="718" alt="image" src="https://github.com/user-attachments/assets/5f14e6e2-1fff-405c-ac61-8af59e47a93a" />
-
+</p>
 3.	En la barra de herramientas, ubica el ícono de DataPlotly (al lado de la consola de Python) y haz clic en él.
-
+<p align="center">
 <img width="921" height="101" alt="image" src="https://github.com/user-attachments/assets/450f41f1-602e-4d7a-bd85-f070be35a8e8" />
-
+</p>
 4.	Se abrirá la ventana del complemento
-
- <img width="677" height="667" alt="image" src="https://github.com/user-attachments/assets/c3d79fa8-f4cd-4329-b2d9-9487c3130617" />
-
+<p align="center">
+<img width="677" height="667" alt="image" src="https://github.com/user-attachments/assets/c3d79fa8-f4cd-4329-b2d9-9487c3130617" />
+</p>
 5.	En el ícono con forma de escoba, selecciona la capa vectorial que quieras graficar. Después elige el campo para el eje X (por ejemplo, “Localidad”) y el campo para el eje Y (por ejemplo, “Población”).
-
+<p align="center">
 <img width="583" height="536" alt="image" src="https://github.com/user-attachments/assets/54b11135-7303-46aa-a56c-a2637e39a49e" />
-
+</p>
 6.	Escoge el tipo de gráfico: barras, dispersión, histograma, pastel, entre otros. También puedes personalizar colores, títulos y etiquetas.
 7.	Haz clic en Crear diagrama y verás el gráfico en pantalla
-
+<p align="center">
 <img width="814" height="756" alt="image" src="https://github.com/user-attachments/assets/0f2add2e-9d3f-45de-bb35-6e7864dd8425" />
-
+</p>
 8.	Si necesitas usarlo en informes o presentaciones, guárdalo con el ícono de Exportar, eligiendo el formato de imagen (.png o .jpg).
 
 
@@ -167,13 +170,13 @@ A continuación, una breve explicación de cada grupo:
 
   Ahora agregar mapa:
   1.	En el menú superior, ve a Web → QuickMapServices → Settings.
-
+  <p align="center">
   <img width="733" height="913" alt="image" src="https://github.com/user-attachments/assets/cd3ba0b6-0c32-4908-b0f1-5c800a99173b" />
-
+  </p>
   2.	En la pestaña More services, haz clic en Get contributed pack para activar más proveedores de mapas.
-  
+  <p align="center">
   <img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/5606ba75-14ca-46eb-a78d-c37087eb3da3" />
-
+  </p>
   3.	Cierra la ventana de configuración.
   4.	Ahora dirígete a Web → QuickMapServices → Google → Google Satellite Hybrid para cargar el mapa satelital.
 
@@ -187,27 +190,30 @@ A continuación, una breve explicación de cada grupo:
 
   Añadir Límites:
   1.	Web → QuickMapServices → OSM → OSM Standard
-     <img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/0dd8f712-75c5-42ae-b9aa-f65916225969" />
-
-Paso 8 Crear un mapa para impresión
+  <p align="center">
+  <img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/0dd8f712-75c5-42ae-b9aa-f65916225969" />
+  </p>
+  
+## Paso 8 Crear un mapa para impresión
 1.	En el menú, haz clic en Propiedades y selecciona Nueva composición de impresión.
-2.	Asigna un nombre a tu mapa para identificarlo fácilmente
+2.	Asigna un nombre a tu mapa para identificarlo fácilmente.
 
+<p align="center">
 <img width="577" height="278" alt="image" src="https://github.com/user-attachments/assets/034d4f94-b816-49e9-9ff9-f8d3b8ed595e" />
-
+</p>
 3.	En el menú de la composición, dirígete a Añadir elementos.
 4.	Allí encontrarás opciones como añadir mapa, imágenes, etiquetas, flecha del norte, escala, entre otros. También puedes ver estas herramientas en la parte izquierda de la pantalla.
-
+<p align="center">
 <img width="847" height="476" alt="image" src="https://github.com/user-attachments/assets/d85cbf1f-7ccb-4762-af74-772710942a64" />
-
+</p>
 5.	Para agregar un título, selecciona Añadir etiqueta. Desde ahí puedes escribir el nombre del mapa, además de cambiar el color, tipo de letra y tamaño del texto.
-
+<p align="center">
 <img width="506" height="630" alt="image" src="https://github.com/user-attachments/assets/6e8a3dbe-74cc-4c95-beaf-e7da169586f0" />
-
+</p>
 6.	Una vez añadidos todos los elementos, tu mapa quedará listo para impresión
-
+<p align="center">
 <img width="921" height="471" alt="image" src="https://github.com/user-attachments/assets/4c367a21-45f9-4c1b-98b7-99c62e463cc5" />
-
+</p>
 7.	Finalmente, en el menú selecciona Exportar a PDF, haz clic y guarda tu mapa en tu computador. 
 
 
