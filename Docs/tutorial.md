@@ -2,15 +2,16 @@
 
 ## Introducción 
 
-QGIS (Quantum GIS) es un software libre y de código abierto diseñado para trabajar con información geográfica. Con él es posible visualizar, analizar y editar datos espaciales en diferentes formatos, así como crear mapas personalizados. Su uso abarca múltiples áreas como la planificación urbana, el medio ambiente, la ingeniería, la agricultura y la gestión territorial.
+En este tutorial realizaremos una introducción básica a QGIS para aprender a manejar la aplicación. Comenzaremos cargando archivos con extensión .shp, que son los más comunes para trabajar con información geográfica, y configuraremos las coordenadas en el sistema de referencia de Bogotá (Colombia), ya que los datos que utilizaremos corresponden a esta ciudad.
 
-Una de las grandes ventajas de QGIS es que incorpora Python como lenguaje de programación a través de su API llamada PyQGIS. Esto permite automatizar procesos, manipular datos de manera más eficiente y crear scripts que simplifican tareas repetitivas dentro del entorno de QGIS.
+En QGIS existen dos tipos principales de mapas: vectoriales y ráster. Sin embargo, en este ejercicio trabajaremos únicamente con los mapas vectoriales. Al finalizar, aprenderemos a exportar el mapa en formato PDF, listo para guardar o imprimir.
 
-Además, gracias a Python es posible desarrollar plugins personalizados que amplían las capacidades del software y lo adaptan a necesidades específicas. En conjunto, QGIS y Python ofrecen una herramienta potente y flexible para el trabajo con datos espaciales, tanto para principiantes como para usuarios avanzados.
+Para este ejercicio utilizaremos bases de datos disponibles en la plataforma Bogotá Mapas, enlazadas con los datos abiertos de la ciudad y con el Laboratorio Urbano de Bogotá. Entre ellas se encuentran:
 
-#### Requisitos:
-Versión recomendada: QGIS 3.x (3.10+). Las instrucciones son aplicables a la mayoría de versiones 3.x; pequeñas diferencias de menú pueden existir.
-QGIS instalado (Windows con OSGeo4W, macOS o Linux), datos vectoriales/raster (Shapefile, GeoPackage, GeoTIFF, GeoJSON), espacio de trabajo donde guardar salidas.
+* Consultorios clínicos de Bogotá (puntos).
+* Territorios de redes de salud por localidad (poligonos).
+* Polígonos de localidades (pologonos).
+* Polígonos de UPZ (poligonos).
 
 ## Paso a paso para la creación de un proyecto Proyecto
 ### Paso 1 Configurar QGIS para Colombia Bogotá
