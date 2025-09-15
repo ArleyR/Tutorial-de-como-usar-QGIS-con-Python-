@@ -22,7 +22,7 @@ QGIS instalado (Windows con OSGeo4W, macOS o Linux), datos vectoriales/raster (S
 
 4.	Luego Vuelve al menú Proyecto y selecciona Guardar como…. Escribe un nombre para tu proyecto (ejemplo: Mapa_Bogotá) y asegúrate de guardarlo en formato .qgz (formato de QGIS).
 
-### 3. PASO 2 Descarga los mapas vectoriales 
+###  PASO 2 Descarga los mapas vectoriales 
 Opción A: Descargar los datos desde Mapas Bogotá
 1.	Ir al navegador web
 2.	Ir a la página: [Mapas Bogotá](https://mapas.bogota.gov.co/#)  
@@ -171,36 +171,44 @@ A continuación, una breve explicación de cada grupo:
 
   2.	En la pestaña More services, haz clic en Get contributed pack para activar más proveedores de mapas.
   
-  <img width="888" height="697" alt="image" src="https://github.com/user-attachments/assets/5606ba75-14ca-46eb-a78d-c37087eb3da3" />
+  <img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/5606ba75-14ca-46eb-a78d-c37087eb3da3" />
 
   3.	Cierra la ventana de configuración.
   4.	Ahora dirígete a Web → QuickMapServices → Google → Google Satellite Hybrid para cargar el mapa satelital.
 
-  <img width="921" height="847" alt="image" src="https://github.com/user-attachments/assets/068b94ef-1c2a-4791-8845-89998a9236bd" />        <img width="921" height="904" alt="image" src="https://github.com/user-attachments/assets/1aad1605-b09e-4321-b853-e3991564865f" />
+  <p align="center">
+  <img src="https://github.com/user-attachments/assets/068b94ef-1c2a-4791-8845-89998a9236bd" alt="Imagen 1" style="width:600px; height:400px; object-fit:cover; margin-right:15px;" />
+  <img src="https://github.com/user-attachments/assets/1aad1605-b09e-4321-b853-e3991564865f" alt="Imagen 2" style="width:600px; height:400px; object-fit:cover;" />
+  </p>
 
-  5.	Si necesitas ajustar la transparencia, haz clic derecho sobre la capa, selecciona Propiedades, entra a la opción Transparencia y          configúrala entre 70–80% para visualizar mejor tus capas vectoriales.
+
+  5.	Si necesitas ajustar la transparencia, haz clic derecho sobre la capa, selecciona Propiedades, entra a la opción Transparencia y          configúrala entre 70–80% para visualizar        mejor tus capas vectoriales.
 
   Añadir Límites:
   1.	Web → QuickMapServices → OSM → OSM Standard
-     <img width="921" height="752" alt="image" src="https://github.com/user-attachments/assets/0dd8f712-75c5-42ae-b9aa-f65916225969" />
+     <img width="700" height="700" alt="image" src="https://github.com/user-attachments/assets/0dd8f712-75c5-42ae-b9aa-f65916225969" />
 
-  	
+Paso 8 Crear un mapa para impresión
+1.	En el menú, haz clic en Propiedades y selecciona Nueva composición de impresión.
+2.	Asigna un nombre a tu mapa para identificarlo fácilmente
 
+<img width="577" height="278" alt="image" src="https://github.com/user-attachments/assets/034d4f94-b816-49e9-9ff9-f8d3b8ed595e" />
 
+3.	En el menú de la composición, dirígete a Añadir elementos.
+4.	Allí encontrarás opciones como añadir mapa, imágenes, etiquetas, flecha del norte, escala, entre otros. También puedes ver estas herramientas en la parte izquierda de la pantalla.
 
-## 9. Guardar resultados y formatos recomendados
-*	GeoPackage (.gpkg): recomendado para múltiples capas y atributos modernos.
-*	GeoJSON: ideal para interoperabilidad web, pero cuidado con precisión y campos grandes.
-*	Shapefile (.shp): compatibilidad, pero limitaciones: nombres de campo cortos, codificación DBF, tipos de datos limitados.
-*	GeoTIFF: para ráster georreferenciado.
-*	Cómo exportar (GUI): clic derecho > Exportar > Guardar objetos como... y elegir formato y CRS.
+<img width="847" height="476" alt="image" src="https://github.com/user-attachments/assets/d85cbf1f-7ccb-4762-af74-772710942a64" />
 
-## 10. Cartografía: crear un mapa para impresión
-*	Proyecto > Nuevo diseño de impresión (o Proyecto > Layouts > Administrar diseños) > Nuevo.
-*	En el diseñador: Añadir elemento > Añadir mapa y arrastra rectángulo para la vista.
-*	Añade Leyenda, Escala, Norte, Título (desde Añadir elemento).
-*	Ajusta etiquetado y simbología para que el mapa sea claro.
-*	Layout > Exportar como PDF o Exportar como imagen.
+5.	Para agregar un título, selecciona Añadir etiqueta. Desde ahí puedes escribir el nombre del mapa, además de cambiar el color, tipo de letra y tamaño del texto.
+
+<img width="506" height="630" alt="image" src="https://github.com/user-attachments/assets/6e8a3dbe-74cc-4c95-beaf-e7da169586f0" />
+
+6.	Una vez añadidos todos los elementos, tu mapa quedará listo para impresión
+
+<img width="921" height="471" alt="image" src="https://github.com/user-attachments/assets/4c367a21-45f9-4c1b-98b7-99c62e463cc5" />
+
+7.	Finalmente, en el menú selecciona Exportar a PDF, haz clic y guarda tu mapa en tu computador. 
+
 
 # Tutorial para usar QGIS con PYTHON
 
