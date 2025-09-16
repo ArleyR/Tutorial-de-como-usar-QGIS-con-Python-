@@ -240,92 +240,18 @@ A continuación, una breve explicación de cada grupo:
 <img width="921" height="471" alt="image" src="https://github.com/user-attachments/assets/4c367a21-45f9-4c1b-98b7-99c62e463cc5" />
 </p>
 
-7.	Finalmente, en el menú selecciona Exportar a PDF, haz clic y guarda tu mapa en tu computador. 
-
-
-# Tutorial para usar QGIS con PYTHON
-
-## 1. Introducción
-
-QGIS es un Sistema de Información Geográfica (SIG) que permite trabajar con mapas, datos espaciales y análisis geográficos.
-Tiene dos formas principales de uso:
-
-* Interfaz gráfica (GUI): todo con menús y botones, sin necesidad de programar.
-
-* PyQGIS (Python): escribir código para automatizar y repetir procesos fácilmente.
-
-En este tutorial haremos lo mismo en ambos métodos:
-
-* Cargar capas.
-* Reproyectar.
-* Crear un buffer.
-* Recortar (clip).
-* Exportar resultados.
-
-## 2. Paso a paso en la GUI (Interfaz Gráfica)
-### 2.1 Cargar capas
-* Menú Capa > Añadir capa > Añadir capa vectorial.
-* Selecciona tu archivo (ejemplo: limite.gpkg).
-* Repite para otra capa (ejemplo: rios.shp).
-
-### 2.2 Reproyectar capas
-
-* Clic derecho sobre la capa > Exportar > Guardar objetos como....
-* Elige un CRS objetivo (ejemplo: EPSG:4326).
-* Guarda con nuevo nombre (ej. rios_4326.gpkg).
-
-### 2.3 Crear un buffer
-
-* Abre la Caja de Herramientas de Procesamiento (Ctrl+Alt+T).
-* Busca "Buffer".
-* Selecciona rios_4326, define una distancia (ej. 500 metros) y ejecuta.
-
-### 2.4 Recortar (Clip)
-
-* Busca "Clip" en la Toolbox.
-* Usa como entrada el buffer y como capa de recorte el limite.gpkg.
-* Guarda salida como rios_buffer_clip.gpkg.
-
-### 2.5 Exportar resultados
-
-* Clic derecho sobre la capa final > Exportar > Guardar objetos como....
-* Elige formato (GeoPackage, Shapefile, GeoJSON).
-  
-## 3. Paso a paso en PyQGIS (Python)
-
-* Abrir la Consola Python (Complementos > Consola Python) y ejecutar los scripts.
-### 3.1 Cargar capas
-### 3.2 Reproyectar
-### 3.3 Crear buffer
-### 3.4 Recortar (Clip)
-### 3.5 Exportar resultados
-
-## 4. Comparación GUI vs PyQGIS
-* GUI: más fácil, intuitivo y visual. Perfecto para empezar.
-* PyQGIS: ideal para automatizar, documentar y repetir procesos.
-ojo (con PyQGIS puedes hacer buffers de 100 capas con un bucle, algo muy lento en la GUI.)
-
-## 5 Buenas prácticas para principiantes
-* Usa GeoPackage en lugar de Shapefile.
-* Mantén siempre el mismo CRS en tu proyecto.
-* Revisa geometrías con Vector > Herramientas de geometría > Verificar validez.
-* Guarda tus scripts y proyectos en carpetas ordenadas.
-
-## 6. Conclusión
-
-* La GUI de QGIS es el primer paso: te permite aprender el flujo básico de análisis.
-* PyQGIS da un segundo nivel: automatización y escalabilidad.
-* Lo mejor es combinar ambos enfoques: probar en GUI y luego convertir en script.
+7.	Finalmente, en el menú selecciona Exportar a PDF, haz clic y guarda tu mapa en tu computador o en la nube. 
 
 ---
 
 # Tutorial para usar datos de QGIS en Python
 
+Como el último punto de como usar QGIS fue exportar nuestro mapa en **PDF** y en Python necesitamos datos para trabajar. Vamos a exportar a nuestro entorno de ejecusión (En nuestro caso *Colab*) la **tabla de atributos** de la capa que querramos trabajar, esto lo explicaremos más adelante.
 
 
 ## Paso 1. Instalar los programas
 
-1. *Instalar QGIS*  
+1. *Instalar QGIS (Como en la fase anterior)*  
    - Descarga desde: [https://qgis.org/es/site/](https://qgis.org/es/site/)  
    - Elige la versión *LTS (Long Term Support)*, más estable.  
    - Instálala como cualquier programa.
@@ -334,13 +260,20 @@ ojo (con PyQGIS puedes hacer buffers de 100 capas con un bucle, algo muy lento e
    - Descarga Python desde: [https://www.python.org/downloads/](https://www.python.org/downloads/)  
    - Una vez instalado, abre la terminal (o símbolo del sistema) y ejecuta:  
 
-   bash
-   pip install geopandas pandas matplotlib
+python
+```
+import pandas as pd
+import geopandas as gpd
+import matplotlib as plt
+```
+
+<img width="461" height="195" alt="image" src="https://github.com/user-attachments/assets/9d3093a3-daa1-4582-a58d-cbcc1f7413e7" />
 
 
 Sin embargo, en este caso para presentarlo de una mejor forma, utilizaremos **colab** como entorno de ejecución, este estará adjuto en el repositorio, en "Docs", para su utilización o sus diversas necesidades.
 
-## Paso 2. Abrir un SHP en QGIS
+
+## Paso 2. Abrir un SHP en QGIS (Esto ya está explicado en la primera fase)
 
 Abre QGIS.
 
@@ -365,12 +298,17 @@ Verás columnas (atributos) y filas (cada elemento del mapa).
 Una vez cargada la capa en QGIS, es posible exportar la información en diferentes formatos según los objetivos del análisis. Este procedimiento se realiza desde el panel de capas con un clic derecho sobre la capa deseada y seleccionando la opción *Exportar → Guardar entidades como…*.
 
 ### 🔹 Exportar únicamente la tabla de atributos
+
+<img width="631" height="767" alt="image" src="https://github.com/user-attachments/assets/bf2e6364-3058-4910-8875-ef2da46ca895" />
+
 1. Seleccionar la capa y hacer clic derecho → *Exportar → Guardar entidades como…*.  
 2. En el campo *Formato, escoger **CSV*.  
 3. Definir la ruta y el nombre del archivo en *Archivo de salida*.  
 4. Confirmar con *Aceptar*.  
 
-De este modo se genera un archivo *.csv, que contiene únicamente la información tabular (sin geometría) y que puede ser abierto en programas como **Excel* o en *Python* mediante la librería *pandas*.
+De este modo se genera un archivo *.csv, que contiene únicamente la información tabular y que puede ser abierto en programas como **Excel* o en *Python* mediante la librería *pandas*. Esta es la tabla a exportar:
+
+<img width="1071" height="717" alt="image" src="https://github.com/user-attachments/assets/da87ff5f-3a4e-47e7-9a2c-8bc5419cb0c5" />
 
 ---
 
@@ -378,42 +316,45 @@ De este modo se genera un archivo *.csv, que contiene únicamente la informació
 
 Una vez exportados los datos desde QGIS, se pueden cargar en Python de acuerdo con el formato elegido:
 
-### 🔹 Lectura de archivos CSV (solo tabla)
-python
-```
-import pandas as pd
-```
+### 🔹 Lectura de archivos CSV o Excel (solo tabla)
 
 # Ruta del archivo exportado
+A esta ruta mediante la libreria de pandas la nombramos como df *(DataFrame)*. Ponemos los dos ejemplos para nombrar la base si es *.CSV* o *.xslx*
 ```
-df = pd.read_csv("C:/ruta/archivo.csv")
+df = pd.read_csv("/content/tabla de atibutos de nmeros.csv")
+df = pd.read_excel("/content/tabla de atibutos de nmeros.xlsx")
 ```
+
+<img width="872" height="122" alt="image" src="https://github.com/user-attachments/assets/03a4d88d-d401-4f3a-8b96-d15785d80787" />
+
 
 # Visualizar las primeras filas
 ```
-print(df.head())
+df.head()
 ```
+
+<img width="1468" height="387" alt="image" src="https://github.com/user-attachments/assets/c24763ee-fe9f-4148-bbf8-c1348ed39a5f" />
+
+---
 
 # Análisis de los datos
 
-Luego de tener la base cargada y haber visualizado que este de forma correcta, solo queda hacer el análisis que requieras para tus datos. Aquí te dejamos algunos ejemplos para que empieces a utilizar los datos espaciales en Python.
+Luego de tener la base cargada y haber verificado que los datos se visualizan correctamente, el siguiente paso es realizar el análisis. Es importante tener en cuenta que el tipo de análisis a realizar dependerá directamente del objetivo del proyecto, de la naturaleza de la base de datos y de las preguntas que quieras responder. No todos los conjuntos de datos espaciales sirven para lo mismo: algunos estarán pensados para estudios urbanos (ejemplo: distribución de colegios en barrios), otros para temas ambientales (ejemplo: áreas protegidas o cobertura de bosques) y otros para análisis socioeconómicos (ejemplo: estratificación por zonas o densidad poblacional).
+
+Además, factores como el nivel de detalle de la base, el tipo de geometría (puntos, líneas o polígonos), la calidad del sistema de referencia espacial (CRS) y la escala del estudio (local, regional o nacional) influirán en qué técnicas y herramientas son más adecuadas. En otras palabras, el análisis no es un proceso único, sino que debe adaptarse a tus necesidades: puede ir desde un resumen estadístico básico de la tabla de atributos hasta cálculos avanzados como áreas, distancias, uniones espaciales o mapas temáticos.
+
+Aquí te dejamos algunos ejemplos prácticos para que empieces a utilizar los datos espaciales en Python, pero recuerda que lo más importante es plantear primero la pregunta de investigación y luego decidir qué análisis te ayudará a responderla.
 
 # Ejemplos de Análisis Espacial en Python con datos de QGIS
 
 Este apartado muestra **ejemplos prácticos** de lo que puedes hacer una vez exportes tus datos desde QGIS a Python, ya sea en **CSV** (solo tabla) o en **SHP/GPKG** (tabla + geometría).
+
 
 ## 1. Análisis básico de tabla (con `pandas`)
 
 Si exportaste solo la **tabla en CSV**, puedes trabajar con `pandas`:
 
 ```
-import pandas as pd
-
-df = pd.read_csv("datos.csv")
-
-# Ver primeras filas
-print(df.head())
-
 # Conteo de registros por categoría (ejemplo: barrios)
 print(df["BARRIO"].value_counts())
 
@@ -492,6 +433,23 @@ plt.title("Colegios dentro de barrios")
 plt.show()
 ```
 
+# Conclusiones y ayudas
+
+El uso de **Python en conjunto con datos geográficos** resulta una herramienta poderosa y eficiente, ya que permite automatizar tareas, manejar grandes volúmenes de información y realizar análisis espaciales avanzados que serían más limitados si solo se usara QGIS.  
+
+En este repositorio encontrarás un **ejemplo básico** claramente explicado, que te servirá como punto de partida para comprender cómo trabajar con datos espaciales en Python. Adicionalmente, hemos incluido un **notebook en Google Colab** con un caso de **geocodificación**, el cual corresponde a los datos extraídos del mapa en la fase 1. Este segundo ejemplo contiene **código más complejo**, que requiere tiempo y pruebas para mejorar la calidad de la geocodificación, pero que a su vez proporciona un nivel de información mucho más detallado y útil para distintos tipos de proyectos.  
+
+En resumen: **usar Python con tus datos geográficos no solo es más eficiente, sino que también abre la puerta a un análisis más profundo, flexible y escalable**. Por último vamos recomendar algunos sitios web donde pueden encontrar más material (Muchos y diversos datos Geográficos) para seguir aprendiendo.
+
+### Datos abiertos locales
+- [Geoportal DANE](https://geoportal.dane.gov.co/) → Datos espaciales y estadísticos de Colombia.  
+- [Datos Abiertos de Bogotá](https://datosabiertos.bogota.gov.co/) → Gran repositorio de datos geográficos y tabulares de la ciudad.  
+- [IDEAM](http://www.ideam.gov.co/) → Datos ambientales y meteorológicos de Colombia.
+
+### Scripts y ejemplos
+- [Awesome Geospatial](https://github.com/sacridini/Awesome-Geospatial) → Colección en GitHub con recursos, librerías y tutoriales de GIS.  
+- [Geopandas Tutorials en GitHub](https://github.com/geopandas/geopandas/tree/main/examples) → Ejemplos prácticos con datasets incluidos.  
+- [PySAL](https://pysal.org/) → Librería de Python para análisis espacial avanzado.  
 
 
 
