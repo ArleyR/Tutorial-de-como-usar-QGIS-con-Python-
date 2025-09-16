@@ -321,8 +321,8 @@ Una vez exportados los datos desde QGIS, se pueden cargar en Python de acuerdo c
 # Ruta del archivo exportado
 A esta ruta mediante la libreria de pandas la nombramos como df *(DataFrame)*. Ponemos los dos ejemplos para nombrar la base si es *.CSV* o *.xslx*
 ```
-df = pd.read_csv("/content/tabla de atibutos de nmeros.csv")
-df = pd.read_excel("/content/tabla de atibutos de nmeros.xlsx")
+df = pd.read_csv("ruta_archivo.csv")
+df = pd.read_excel("ruta_archivo.xlsx")
 ```
 
 <img width="872" height="122" alt="image" src="https://github.com/user-attachments/assets/03a4d88d-d401-4f3a-8b96-d15785d80787" />
