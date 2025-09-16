@@ -321,6 +321,8 @@ ojo (con PyQGIS puedes hacer buffers de 100 capas con un bucle, algo muy lento e
 
 # Tutorial para usar datos de QGIS en Python
 
+
+
 ## Paso 1. Instalar los programas
 
 1. *Instalar QGIS*  
@@ -328,12 +330,15 @@ ojo (con PyQGIS puedes hacer buffers de 100 capas con un bucle, algo muy lento e
    - Elige la versión *LTS (Long Term Support)*, más estable.  
    - Instálala como cualquier programa.
 
-2. *Instalar Python y librerías necesarias*  
+2. *Instalar Python (O utilizalo en tu entorno de preferencia) y librerías necesarias*  
    - Descarga Python desde: [https://www.python.org/downloads/](https://www.python.org/downloads/)  
    - Una vez instalado, abre la terminal (o símbolo del sistema) y ejecuta:  
 
    bash
    pip install geopandas pandas matplotlib
+
+
+Sin embargo, en este caso para presentarlo de una mejor forma, utilizaremos **colab** como entorno de ejecución, este estará adjuto en el repositorio, en "Docs", para su utilización o sus diversas necesidades.
 
 ## Paso 2. Abrir un SHP en QGIS
 
