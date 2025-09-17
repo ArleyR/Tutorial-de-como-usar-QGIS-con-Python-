@@ -16,11 +16,18 @@ Para este ejercicio utilizaremos bases de datos disponibles en la plataforma Bog
 ## Paso a paso para la creación de un  Proyecto
 ### Paso 1 Configurar QGIS para Colombia Bogotá
 1.	Abrir la aplicación QGIS
+
+<p align="center">
+<img width="1307" height="655" alt="image" src="https://github.com/user-attachments/assets/770854a0-b59d-4570-b727-e4987094fce0" />
+</p>
+
 2.	Ir a Proyecto, → Propiedades → SRC 
 3.	En la opción Filtrar, escribe EPSG:3116 – MAGNA-SIRGAS / Colombia Bogotá zone. Selecciónalo, luego haz clic en Aplicar y después en Aceptar.
+
 <p align="center">
 <img width="678" height="495" alt="image" src="https://github.com/user-attachments/assets/f01b27c4-6141-4b3b-ad00-964af70d78f6" />
 </p>
+
 4.	Luego Vuelve al menú Proyecto y selecciona Guardar como…. Escribe un nombre para tu proyecto (ejemplo: Mapa_Bogotá) y asegúrate de guardarlo en formato .qgz (formato de QGIS).
 
 ###  PASO 2 Descarga los mapas vectoriales 
@@ -29,6 +36,7 @@ Opción A: Descargar los datos desde Mapas Bogotá
 2.	Ir a la página: [Mapas Bogotá](https://mapas.bogota.gov.co/#)  
 3.	En el portal de Mapas Bogotá, selecciona la opción Ver datos (puedes elegir por Temática o por Sector).
 4.	Haz clic en Más información en el conjunto de datos que quieras descargar; esto te llevará al portal de Datos Abiertos de Bogotá.
+
 <p align="center">
 .<img width="578" height="395" alt="image" src="https://github.com/user-attachments/assets/2b802948-c731-4f85-b34d-8a4d7b449262" />
 </p>
@@ -50,41 +58,54 @@ Opción A: Descargar los datos desde Mapas Bogotá
 
 ## PASO 3 Verificación de la carga de los datos
 1.	 Arrastra los archivos descargados al panel de capas de QGIS; allí podrás verlos cargados en el proyecto.
+
 <p align="center">
 <img width="780" height="408" alt="image" src="https://github.com/user-attachments/assets/db35f3e3-0081-4a30-8055-bc4c80a73b93" />
 </p>
+
 2.	Haz clic derecho sobre una capa para acceder a sus opciones: abrir la tabla de atributos, duplicar la capa, cambiar el nombre, o ver y modificar el SRC de la capa, entre otras.
+
 <p align="center">
 <img width="303" height="352" alt="image" src="https://github.com/user-attachments/assets/929a2e94-8db5-477e-9061-03b75baae1cd" />
 </p>
 
 3.	Verifica que las capas tengan asignado el sistema de coordenadas EPSG:3116 – MAGNA-SIRGAS / Colombia Bogotá zone. (Si no lo tienen, corrígelo): ve a Exportar → Guardar como…, asigna un nombre al archivo (preferiblemente el mismo nombre original) y selecciona el SRC correcto (EPSG:3116).
+
 <p align="center">
 <img width="347" height="389" alt="image" src="https://github.com/user-attachments/assets/35eee38f-9440-49d1-a8bd-30bc1582fcf7" />
 </p>
+
 4.	Una vez hecho esto, deberías visualizar correctamente el mapa de Bogotá en la pantalla de QGIS.
+
 <p align="center">
 <img width="398" height="353" alt="image" src="https://github.com/user-attachments/assets/a8aee186-34e5-431e-b8d5-b7a37a816210" />
 </p>
 
 ### Otra forma de cargar los datos:
 1.	En QGIS, ve al menú Capa → Añadir capa → Añadir capa vectorial.
+
 <p align="center">
 <img width="873" height="444" alt="image" src="https://github.com/user-attachments/assets/5bb1fda6-1281-4973-98f5-64b9297242de" />
 </p>
+
 2.	En la sección Fuente, haz clic en los tres puntos (…) y navega hasta la carpeta donde guardaste tus capas
+
 <p align="center">
 <img width="870" height="550" alt="image" src="https://github.com/user-attachments/assets/0c024a73-a3f6-4bd6-b88a-a0f7d77b45a2" />
 </p>
+
 3.	Selecciona los archivos y haz clic en Añadir; las capas deberían aparecer en el panel de capas de QGIS
 
 
 ## PASO 4 CONFIGURACIÓN DE COLORES 
 1.	 Haz clic derecho sobre la capa y selecciona Propiedades.
+
 <p align="center">
 <img width="450" height="460" alt="image" src="https://github.com/user-attachments/assets/b40b4853-4c78-48dc-a599-2e28b772b7fd" />
 </p>
+
 2.	En la ventana que se abre, ubícate en la pestaña Simbología.
+
 <p align="center">
 <img width="535" height="415" alt="image" src="https://github.com/user-attachments/assets/cf1b566b-4182-4855-953e-048a119aa2ed" />
 </p>
@@ -96,34 +117,45 @@ Opción A: Descargar los datos desde Mapas Bogotá
 <p align="center">
 <img width="836" height="232" alt="image" src="https://github.com/user-attachments/assets/18017830-a364-4c7d-a0d9-6628422f658e" />
 </p>
+
 5.	Finalmente, haz clic en Aplicar y luego en Aceptar para guardar los cambios.
 6.	Repite este proceso con las demás capas para que todas tengan una visualización clara y coherente.
 
 ## PASO 5: Uso de Herramientas Vectoriales
 1.	En el menú superior de QGIS, haz clic en Vectorial. Allí encontrarás varias carpetas de herramientas que te permiten analizar y transformar tus datos
+
 <p align="center">
 <img width="347" height="258" alt="image" src="https://github.com/user-attachments/assets/02f2d7bb-4758-4050-87e2-3a2deb02b799" />
 </p>
+
 A continuación, una breve explicación de cada grupo:
    * Analysis Tools: Son herramientas de análisis de datos espaciales, como las que ya vimos (estadísticas básicas, contar puntos en polígonos, matriz de distancias, etc).
+
      <p align="center">
      <img width="609" height="266" alt="image" src="https://github.com/user-attachments/assets/f02f7eff-f8fc-4005-89cc-77cac47860b1" />
       </p>
+      
    * Geoprocessing Tools: Son operaciones geométricas que se hacen sobre polígonos, líneas o puntos.
      Incluyen: Buffer, Intersección, Unión, Diferencia, Cortar, etc.
+
      <p align="center">
      <img width="592" height="296" alt="image" src="https://github.com/user-attachments/assets/c3764c45-295d-4cb7-ab88-50f0552f8f61" />
      </p>
 
    * Geometry Tools: Permite hacer análisis y ediciones geométricas más específicas: calcular centroides, extraer vértices, convertir          geometrías, calcular áreas o longitudes.
+
      <p align="center">
      <img width="447" height="332" alt="image" src="https://github.com/user-attachments/assets/1389ace1-e048-4b71-8a9e-e89a35fd6186" />
      </p>
+     
    * Research Tools: Son herramientas de exploración: seleccionar por ubicación, localizar por atributo, buscar vecinos más cercanos,etc.
+
      <p align="center">
      <img width="513" height="370" alt="image" src="https://github.com/user-attachments/assets/00eef671-4798-4f8e-a7b3-88454fe2c293" />
      </p>
+     
    * Data Management Tools: Se enfocan en la gestión de capas: unir tablas, dividir una capa por atributos, exportar campos, convertir         formatos, etc.
+
      <p align="center">
      <img width="586" height="286" alt="image" src="https://github.com/user-attachments/assets/f0c780f4-5282-4561-9cf1-6beeb8002896" />
      </p>
@@ -132,6 +164,7 @@ A continuación, una breve explicación de cada grupo:
 3.	Cuando realices una operación con estas herramientas (como unir capas, contar puntos en un polígono, calcular distancias, etc.), QGIS genera automáticamente una nueva capa de resultados.
 4.	Es recomendable renombrar estas capas para identificarlas fácilmente y evitar confusiones con las capas originales. De lo contrario, podrías perder el rastro de qué operación realizaste en cada capa.
 5.	Es recomendable guardar las capas de resultados para no perder la información. Para hacerlo, puedes guiarte con el procedimiento explicado en el Paso 3, parte 3 (Exportar → Guardar como objeto). 
+
 <p align="center">
 <img width="1082" height="559" alt="image" src="https://github.com/user-attachments/assets/32e9f3af-3faa-437a-8afe-300e57a6640d" />
 </p>
@@ -140,19 +173,25 @@ A continuación, una breve explicación de cada grupo:
 
 ## Paso 6: visualización de graficas 
 1.	Ve al menú Complementos y selecciona Administrar e instalar complementos.
+
 <p align="center">
 <img width="921" height="108" alt="image" src="https://github.com/user-attachments/assets/12bac589-31b1-42e1-9610-a31926096c11" />
 </p>
+
 2.	En el buscador escribe DataPlotly, instálalo y, cuando termine, haz clic en Cerrar.
+
 <p align="center">
 <img width="921" height="718" alt="image" src="https://github.com/user-attachments/assets/5f14e6e2-1fff-405c-ac61-8af59e47a93a" />
 </p>
+
 3.	En la barra de herramientas, ubica el ícono de DataPlotly (al lado de la consola de Python) y haz clic en él.
+
 <p align="center">
 <img width="921" height="101" alt="image" src="https://github.com/user-attachments/assets/450f41f1-602e-4d7a-bd85-f070be35a8e8" />
 </p>
 
 4.	Se abrirá la ventana del complemento
+
 <p align="center">
 <img width="677" height="667" alt="image" src="https://github.com/user-attachments/assets/c3d79fa8-f4cd-4329-b2d9-9487c3130617" />
 </p>
@@ -242,9 +281,14 @@ A continuación, una breve explicación de cada grupo:
 
 7.	Finalmente, en el menú selecciona Exportar a PDF, haz clic y guarda tu mapa en tu computador o en la nube. 
 
+
+## Conclusión
+
+En este tutorial se permitió familiarizarse con los aspectos más básicos de QGIS, desde la configuración inicial del proyecto y la descarga de datos vectoriales hasta la personalización de capas, el uso de herramientas de análisis y la creación de mapas listos para impresión. A lo largo de los pasos se aprendió a trabajar con shapefiles, configurar sistemas de coordenadas, aplicar simbología y utilizar complementos como DataPlotly y QuickMapServices para enriquecer la visualización y el análisis. En conjunto, este ejercicio muestra cómo QGIS facilita la integración, exploración y representación de información geográfica de manera sencilla y práctica.
+
 Con esto concluimos la primera parte del tutorial de QGIS.
 
-En la siguiente sección continuaremos con un enfoque práctico, donde aprenderemos a usar QGIS junto con Python.
+Acontinuación continuaremos con un enfoque práctico, donde aprenderemos a usar QGIS junto con Python.
 ---
 
 # Tutorial para usar datos de QGIS en Python
@@ -269,9 +313,9 @@ import pandas as pd
 import geopandas as gpd
 import matplotlib as plt
 ```
-
+<p align="center">
 <img width="461" height="195" alt="image" src="https://github.com/user-attachments/assets/9d3093a3-daa1-4582-a58d-cbcc1f7413e7" />
-
+</p>
 
 Sin embargo, en este caso para presentarlo de una mejor forma, utilizaremos **colab** como entorno de ejecución, este estará adjuto en el repositorio, en "Docs", para su utilización o sus diversas necesidades.
 
@@ -302,7 +346,9 @@ Una vez cargada la capa en QGIS, es posible exportar la información en diferent
 
 ### 🔹 Exportar únicamente la tabla de atributos
 
+<p align="center">
 <img width="631" height="767" alt="image" src="https://github.com/user-attachments/assets/bf2e6364-3058-4910-8875-ef2da46ca895" />
+</p>
 
 1. Seleccionar la capa y hacer clic derecho → *Exportar → Guardar entidades como…*.  
 2. En el campo *Formato, escoger **CSV*.  
@@ -311,7 +357,9 @@ Una vez cargada la capa en QGIS, es posible exportar la información en diferent
 
 De este modo se genera un archivo *.csv, que contiene únicamente la información tabular y que puede ser abierto en programas como **Excel* o en *Python* mediante la librería *pandas*. Esta es la tabla a exportar:
 
+<p align="center">
 <img width="1071" height="717" alt="image" src="https://github.com/user-attachments/assets/da87ff5f-3a4e-47e7-9a2c-8bc5419cb0c5" />
+</p>
 
 ---
 
@@ -328,16 +376,18 @@ df = pd.read_csv("ruta_archivo.csv")
 df = pd.read_excel("ruta_archivo.xlsx")
 ```
 
+<p align="center">
 <img width="872" height="122" alt="image" src="https://github.com/user-attachments/assets/03a4d88d-d401-4f3a-8b96-d15785d80787" />
-
+</p>
 
 # Visualizar las primeras filas
 ```
 df.head()
 ```
 
+<p align="center">
 <img width="1468" height="387" alt="image" src="https://github.com/user-attachments/assets/c24763ee-fe9f-4148-bbf8-c1348ed39a5f" />
-
+</p>
 ---
 
 # Análisis de los datos
