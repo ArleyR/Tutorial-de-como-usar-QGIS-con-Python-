@@ -242,6 +242,9 @@ A continuación, una breve explicación de cada grupo:
 
 7.	Finalmente, en el menú selecciona Exportar a PDF, haz clic y guarda tu mapa en tu computador o en la nube. 
 
+Con esto concluimos la primera parte del tutorial de QGIS.
+
+En la siguiente sección continuaremos con un enfoque práctico, donde aprenderemos a usar QGIS junto con Python.
 ---
 
 # Tutorial para usar datos de QGIS en Python
