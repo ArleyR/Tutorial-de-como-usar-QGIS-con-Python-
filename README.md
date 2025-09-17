@@ -58,7 +58,7 @@ El tutorial de QGIS ofrece una guía básica, aprovechando datos abiertos de Bog
 
 ## Paso 2. Utilización de QGIS
 
-Con los pasos podrás utilizar QGIS con Python
+Con los pasos mostrados en la primera fase, tendrás los conosimientos necesarios para pasar los datos de **QGIS* a **Python*
 
 ## Paso 3 Lectura de los datos en Python
 
