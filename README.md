@@ -22,14 +22,21 @@ El tutorial se centra en un caso práctico para la ciudad de  Bogotá, utilizand
 
 3. Contenido del Tutorial
 
-0.1 Preparación del Proyecto
-0.2 Descarga de Mapas Vectoriales
-0.3 Carga y Verificación de Datos
-0.4 Configuración de Simbología
-0.5 Herramientas Vectoriales
-0.6 Visualización de Gráficas
-0.7 Complemento QuickMapServices
-0.8 Diseño de Mapas para Impresión
+   0.1 Preparación del Proyecto
+
+   0.2 Descarga de Mapas Vectoriales
+
+   0.3 Carga y Verificación de Datos
+
+   0.4 Configuración de Simbología
+
+   0.5 Herramientas Vectoriales
+
+   0.6 Visualización de Gráficas
+
+   0.7 Complemento QuickMapServices
+
+   0.8 Diseño de Mapas para Impresión
 
 4. Resultados Esperados
 
