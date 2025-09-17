@@ -46,7 +46,7 @@ El tutorial se centra en un caso práctico para la ciudad de  Bogotá, utilizand
 * Mapas finales listos para impresión o difusión digital.
 
 5. Conclusiones
-El tutorial de QGIS ofrece una guía básica para principiantes, aprovechando datos abiertos de Bogotá y complementos como DataPlotly y QuickMapServices, lo que permite desarrollar el ciclo completo en SIG: descarga, análisis y presentación de mapas listos para impresión.
+El tutorial de QGIS ofrece una guía básica, aprovechando datos abiertos de Bogotá y complementos como DataPlotly y QuickMapServices, lo que permite desarrollar el ciclo completo en SIG: descarga, análisis y presentación de mapas listos para impresión.
 
 ## Paso 1. Instalar los programas (Links ya mostrados)
 
