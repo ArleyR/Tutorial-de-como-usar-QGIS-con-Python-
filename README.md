@@ -88,3 +88,5 @@ Con los datos ya en Python puedes utilizarlos para el análisis de tu interés!
 ---
 
 La información completa del tutorial se encuentra en la carpeta DOC, bajo el archivo denominado *tutorial.md*, junto con las carpetas que contienen los datos utilizados para la elaboración del mapa.
+
+En la carpeta *Archivos para tutorial* se encuentran los enlaces de Drive con el mapa vectorial y el procedimiento realizado en QGIS
