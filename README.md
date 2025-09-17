@@ -23,6 +23,8 @@ El tutorial se centra en un caso práctico para la ciudad de  Bogotá, utilizand
 ## 3. Contenido del Tutorial  
 
 Vectorial :
+
+
    0.1 Preparación del Proyecto
 
    0.2 Descarga de Mapas Vectoriales
@@ -37,8 +39,12 @@ Vectorial :
 
    0.7 Complemento QuickMapServices
 
-   0.8 Diseño de Mapas para Impresión
+   0.8 Diseño de Mapas para Impresión. 
+
+   
 Ráster:
+
+
    0.1 Carga de un mapa de coberturas de MapBiomas Colombia (formato .tif).
 
    0.2 Configuración de simbología y asignación de colores por tipo de cobertura usando códigos HTML.
