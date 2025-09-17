@@ -4,7 +4,7 @@
 
 En este tutorial realizaremos una introducción básica a QGIS para aprender a manejar la aplicación. Comenzaremos cargando archivos con extensión .shp, que son los más comunes para trabajar con información geográfica, y configuraremos las coordenadas en el sistema de referencia de Bogotá (Colombia), ya que los datos que utilizaremos corresponden a esta ciudad.
 
-En QGIS existen dos tipos principales de mapas: vectoriales y ráster. Sin embargo, en este ejercicio trabajaremos únicamente con los mapas vectoriales. Al finalizar, aprenderemos a exportar el mapa en formato PDF, listo para guardar o imprimir.
+En QGIS existen dos tipos principales de mapas: vectoriales y ráster. Sin embargo, en esta parte del ejercicio trabajaremos únicamente con los mapas vectoriales. Al finalizar, aprenderemos a exportar el mapa en formato PDF, listo para guardar o imprimir.
 
 Para este ejercicio utilizaremos bases de datos disponibles en la plataforma Bogotá Mapas, enlazadas con los datos abiertos de la ciudad y con el Laboratorio Urbano de Bogotá. Entre ellas se encuentran:
 
@@ -280,13 +280,155 @@ A continuación, una breve explicación de cada grupo:
 </p>
 
 7.	Finalmente, en el menú selecciona Exportar a PDF, haz clic y guarda tu mapa en tu computador o en la nube. 
+Con esto concluimos la primera parte del tutorial de QGIS Vectorial.
 
+## Ahora trabajaremos con un proyecto de QGIS en su componente ráster. 
+
+En esta parte del tutorial no repetiré los pasos, ya que estos ya se explicaron en la primera parte, específicamente en el análisis con el step vectorial. Aquí únicamente colocaré los títulos e indicaré el número del paso correspondiente para que, en caso de que no lo recuerden, puedan consultarlo allí.
+
+PASO 1  Configurar QGIS para Colombia Bogotá
+
+PASO 2  Descarga los mapas
+     1.	Abrir navegador web
+     2.	Ir a: https://storage.googleapis.com/mapbiomas-public/initiatives/colombia/collection_2/lulc/mapbiomas_colombia_collection2_integration_v1/mapbiomas_colombia_coclassification_2023.tif
+(En este caso, se les proporcionará el mapa.)
+
+PASO 3 Verificar que Cargó Correctamente
+
+Se repite el mismo procedimiento que en el paso 3 del vectorial 
+
+Opción alternativa:
+1. En QGIS, abre el menú Capa → Añadir capa → Añadir capa vectorial.
+
+<p align="center">
+<img width="921" height="622" alt="image" src="https://github.com/user-attachments/assets/d0d5de29-7ba4-4ed1-9e09-5b8f385dea3f" />
+</p>
+
+2. En la sección Fuente, haz clic en el botón de exploración (…) y selecciona la carpeta donde guardaste tus capas.
+
+<p align="center">
+<img width="921" height="581" alt="image" src="https://github.com/user-attachments/assets/6a119bc1-e88e-40e4-89b0-a5b87427a6fd" />
+</p>
+
+PASO 4: Configuración de colores
+
+1. Haz clic derecho sobre la capa y selecciona Propiedades.
+2. En la ventana que se abre, dirígete a la pestaña Simbología.
+3. En el tipo de renderizador, selecciona Valores únicos.
+
+<p align="center">
+<img width="921" height="591" alt="image" src="https://github.com/user-attachments/assets/62bf2995-8744-4999-9b31-b5c9e5ae7241" />
+</p>
+
+4. Haz clic en Clasificar para que QGIS detecte automáticamente todas las clases.
+5. Finalmente, haz clic en Aplicar y luego en Aceptar.
+
+<p align="center">
+<img width="884" height="587" alt="image" src="https://github.com/user-attachments/assets/292dabd3-762e-447f-8f3e-a15873cadf47" />
+</p>
+
+Paso 5 Personalizar los Colores del mapa 
+1. Haz clic derecho en la capa y selecciona Propiedades → Simbología.
+2. En la pestaña Simbología, personaliza los colores por valor:
+ejemplo
+- Valor 3 (Bosque): Verde oscuro #006400
+- Valor 4 (Sabana): Verde oliva #9ACD32
+- Valor 12 (Campo Natural): Verde claro #90EE90
+- Valor 15 (Pastizal): Amarillo verdoso #ADFF2F
+- Valor 18 (Agricultura): Naranja #FF8C00
+- Valor 21 (Mosaico): Naranja claro #FFB347
+- Valor 24 (Urbano): Rojo #FF0000
+- Valor 33 (Agua): Azul #0000FF
+  * Haz doble clic en el color que aparece junto al número que deseas modificar.
+  * En el campo llamado Notación HTML, escribe el código del color y luego haz clic en Aceptar.
+ 
+    <p align="center">
+    <img width="921" height="674" alt="image" src="https://github.com/user-attachments/assets/ca655a64-00f5-4c59-8c98-5127223cbe39" />
+    </p>
+    
+  * Si no encuentras el número en la lista, haz clic en el botón “+” que aparece junto a Clasificar para añadirlo.
+ 
+    <p align="center">
+    <img width="921" height="590" alt="image" src="https://github.com/user-attachments/assets/ad3625cc-b4e7-4c24-b12f-6cb619e279eb" />
+    </p>
+    
+  * asi quedaria
+ 
+    <p align="center">
+    <img width="744" height="719" alt="image" src="https://github.com/user-attachments/assets/a0e4d037-8aaf-44f3-8edc-2e641a9b236d" />
+    </p>
+
+PASO 6: Estadísticas generales del ráster
+
+1. Haz clic derecho sobre la capa y selecciona Propiedades.
+
+2. Ve a la pestaña Información para consultar los metadatos y estadísticas básicas.
+
+<p align="center">
+<img width="921" height="599" alt="image" src="https://github.com/user-attachments/assets/30888407-d09b-483a-9384-89cc4187f3ff" />
+</p>
+
+3. Luego dirígete a la pestaña Histograma:
+
+  * Haz clic en Calcular histograma.
+  * Observa cuáles son los valores más frecuentes en la distribución del ráster.
+
+  <p align="center">
+  <img width="921" height="598" alt="image" src="https://github.com/user-attachments/assets/673b5d04-d54f-4cd0-9168-a328b95a3add" />
+  </p>
+  
+PASO 7: Calcular área por tipo de cobertura
+
+1. Ve al menú Procesos → Caja de herramientas.
+
+<p align="center">
+<img width="921" height="112" alt="image" src="https://github.com/user-attachments/assets/8bca648a-8489-411c-a5c2-017391d30d7e" />
+</p>
+
+2. Expande la sección Raster analysis.
+
+<p align="center">
+<img width="899" height="858" alt="image" src="https://github.com/user-attachments/assets/ab24d46c-6df5-4770-a314-3db565c917ac" />
+</p>
+
+3. Busca y selecciona Raster layer unique values report.
+
+<p align="center">
+<img width="589" height="284" alt="image" src="https://github.com/user-attachments/assets/a13c8925-1705-4822-8003-c9fa01dc3949" />
+</p>
+
+4. En Input layer, elige tu capa ráster.
+
+<p align="center">
+<img width="921" height="741" alt="image" src="https://github.com/user-attachments/assets/f1a2498d-6731-49ba-9393-4fd323b2ef50" />
+</p>
+
+5. Haz clic en Ejecutar.
+6. El resultado será una tabla con las columnas Value, Pixel count y Area (m²) para cada clase identificada.
+
+Paso 8 instalar el complemento QuickMapServices (se hixzo igual ap paso 7 vectorial)
+
+<p align="center">
+<img width="921" height="389" alt="image" src="https://github.com/user-attachments/assets/c53e407e-e015-4ad6-ad84-d8de5e540467" />
+</p>
+
+
+Añadir Límites Administrativos
+
+<p align="center">
+<img width="921" height="556" alt="image" src="https://github.com/user-attachments/assets/e7f55330-b16e-4c78-b811-f75236bed2ea" />
+</p>
+
+Paso 8 Crear un mapa para impresión
+
+<p align="center">
+<img width="921" height="658" alt="image" src="https://github.com/user-attachments/assets/4e343029-bf17-4988-9d67-f73b9435d17f" />
+</p>
 
 ## Conclusión
 
-En este tutorial se permitió familiarizarse con los aspectos más básicos de QGIS, desde la configuración inicial del proyecto y la descarga de datos vectoriales hasta la personalización de capas, el uso de herramientas de análisis y la creación de mapas listos para impresión. A lo largo de los pasos se aprendió a trabajar con shapefiles, configurar sistemas de coordenadas, aplicar simbología y utilizar complementos como DataPlotly y QuickMapServices para enriquecer la visualización y el análisis. En conjunto, este ejercicio muestra cómo QGIS facilita la integración, exploración y representación de información geográfica de manera sencilla y práctica.
+Este tutorial permitió recorrer de manera práctica las funciones básicas de QGIS, desde la configuración inicial y la carga de capas vectoriales hasta la personalización de colores, el uso de herramientas de análisis y la exportación de mapas listos para impresión. En la segunda parte se incorporó el trabajo con datos ráster, lo que amplió las posibilidades de análisis espacial mediante la interpretación de histogramas, la clasificación temática y el cálculo de áreas por tipo de cobertura. En conjunto, la experiencia muestra cómo QGIS, gracias a su flexibilidad y variedad de herramientas, se convierte en una plataforma fundamental para gestionar, analizar y comunicar información geográfica de forma clara y accesible.
 
-Con esto concluimos la primera parte del tutorial de QGIS.
 
 Acontinuación continuaremos con un enfoque práctico, donde aprenderemos a usar QGIS junto con Python.
 
