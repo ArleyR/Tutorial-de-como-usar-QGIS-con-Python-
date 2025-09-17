@@ -289,6 +289,7 @@ En este tutorial se permitió familiarizarse con los aspectos más básicos de Q
 Con esto concluimos la primera parte del tutorial de QGIS.
 
 Acontinuación continuaremos con un enfoque práctico, donde aprenderemos a usar QGIS junto con Python.
+
 ---
 
 # Tutorial para usar datos de QGIS en Python
