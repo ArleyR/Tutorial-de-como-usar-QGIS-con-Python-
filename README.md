@@ -1,38 +1,45 @@
 # Tutorial-de-como-usar-QGIS-con-Python-
 
 ## Introducción
-Este repositorio contiene un tutorial paso a paso sobre cómo usar QGIS junto con Python para automatizar procesos, manipular capas geográficas y crear scripts personalizados dentro del entorno de QGIS.
+Este repositorio presenta un informe y analiza el contenido del tutorial de QGIS, un software libre de sistemas de información geográfica (SIG). QGIS permite visualizar, editar y analizar datos espaciales, siendo una herramienta clave en proyectos de cartografía, análisis territorial y gestión de información geográfica.
 
-Aprenderás a:
-* Breve explicación de qué es QGIS y qué es PyQGIS.
-* Qué aprenderá el usuario siguiendo el tutorial.
-Desarrollar un plugin sencillo en QGIS con PyQGIS.
+El tutorial se centra en un caso práctico para la ciudad de  Bogotá, utilizando datos oficiales disponibles en plataformas abiertas de la ciudad.
 
-Requisitos previos
+1. Requisitos previos
 * Instalar y configurar QGIS.  [QGIS](https://qgis.org/download/) (versión recomendada: 3.x)
 * Configurar Python.Python 3.x (viene incluido con QGIS)
 * Librerías adicionales (si se usan scripts externos): "pip install geopandas rasterio pyproj"
 
-### contenido para QGIS
-1.  Introducción
-2.  Interfaz rápida (qué ver y para qué)
-3.  Flujo de trabajo básico (pasos generales)
-4.  Cómo cargar datos (GUI)
-5.  Reproyección y sistema de coordenadas
-6.  Simbología y etiquetado
-7.  Herramientas de geoprocesamiento (GUI)
-8.  Modeler (automatizar procesos sin programar)
-9.  Guardar resultados y formatos recomendados
-10.  Cartografía: crear un mapa para impresión
 
-### contenido para QGIS con Python
+2. Objetivos del Tutorial
+* Introducir a los usuarios en el manejo básico de QGIS.
+* Enseñar la carga y configuración de archivos vectoriales en formato Shapefile (.shp).
+* Configurar el sistema de referencia de coordenadas de Colombia (EPSG:3116 – MAGNA-SIRGAS / Bogotá zone).
+* Aplicar simbología personalizada para mejorar la visualización.
+* Utilizar herramientas vectoriales básicas para análisis.
+* Incorporar complementos como DataPlotly y QuickMapServices.
+* Diseñar un mapa final y exportarlo en formato PDF.
 
-# Tutorial Básico: Usar archivos SHP en Python con ayuda de QGIS
+3. Contenido del Tutorial
 
-Este tutorial está pensado para **principiantes totales**, que nunca han usado QGIS ni Python con datos espaciales.  
-El objetivo es aprender a **abrir un archivo SHP, exportarlo y trabajarlo en Python**.
+0.1 Preparación del Proyecto
+0.2 Descarga de Mapas Vectoriales
+0.3 Carga y Verificación de Datos
+0.4 Configuración de Simbología
+0.5 Herramientas Vectoriales
+0.6 Visualización de Gráficas
+0.7 Complemento QuickMapServices
+0.8 Diseño de Mapas para Impresión
 
----
+4. Resultados Esperados
+
+* Proyecto de QGIS con capas geográficas de Bogotá correctamente cargadas y simbolizadas.
+* Análisis básico de datos espaciales mediante herramientas vectoriales.
+* Gráficos temáticos generados con DataPlotly.
+* Mapas finales listos para impresión o difusión digital.
+
+5. Conclusiones
+El tutorial de QGIS ofrece una guía básica para principiantes, aprovechando datos abiertos de Bogotá y complementos como DataPlotly y QuickMapServices, lo que permite desarrollar el ciclo completo en SIG: descarga, análisis y presentación de mapas listos para impresión.
 
 ## Paso 1. Instalar los programas (Links ya mostrados)
 
