@@ -70,4 +70,4 @@ Con los datos ya en Python puedes utilizarlos para el análisis de tu interés!
 
 ---
 
-En el apartado de "tutorial.md" encontrarás la explicación detallada de cada uno de estos pasos.
+La información completa del tutorial se encuentra en la carpeta DOC, bajo el archivo denominado tutorial.md, junto con las carpetas que contienen los datos utilizados para la elaboración del mapa.
