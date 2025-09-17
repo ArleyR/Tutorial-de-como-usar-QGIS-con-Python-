@@ -13,7 +13,7 @@ Para este ejercicio utilizaremos bases de datos disponibles en la plataforma Bog
 * Polígonos de localidades (pologonos).
 * Polígonos de UPZ (poligonos).
 
-## Paso a paso para la creación de un proyecto Proyecto
+## Paso a paso para la creación de un  Proyecto
 ### Paso 1 Configurar QGIS para Colombia Bogotá
 1.	Abrir la aplicación QGIS
 2.	Ir a Proyecto, → Propiedades → SRC 
